@@ -1,0 +1,175 @@
+#toggle-notification.every-time {
+  background-color: #8a7040;
+  color: white;
+  font-weight: bold;
+}
+
+#toggle-notification.once {
+  background-color: #5f8f5f;
+  color: white;
+  font-weight: bold;
+}
+
+#toggle-notification.off {
+  background-color: #c13b56;
+  color: white;
+  font-weight: bold;
+}
+
+.response-banner {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.response-banner::before {
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.response-banner.acknowledged {
+  background-color: #5f8f5f;
+}
+
+.response-banner.acknowledged::before {
+  content: '\2713';
+}
+
+.response-banner.partial {
+  background-color: #8a7040;
+}
+
+.response-banner.partial::before {
+  content: '\2248';
+}
+
+.response-banner.ignored {
+  background-color: #c13b56;
+}
+
+.response-banner.ignored::before {
+  content: '!';
+}
+
+body {
+  width: 350px;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ddd;
+}
+
+header {
+  padding: 12px 16px;
+  background-color: #696969;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+h1 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+#message {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 14px;
+  padding: 16px;
+  background-color: #3a3a3a;
+  border-radius: 14px;
+}
+
+#message img {
+  width: 46px;
+  flex-shrink: 0;
+}
+
+#message h2 {
+  margin: 0;
+  font-size: 14px;
+}
+
+#description {
+  margin-top: 5px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+button {
+  padding: 9px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 9px;
+  background-color: transparent;
+  color: #ccc;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+button:focus-visible {
+  outline: 2px solid #5595ff;
+  outline-offset: 1px;
+}
+
+button:active {
+  background-color: #555;
+}
+
+#dismiss-options {
+  display: flex;
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+
+#dismiss-options button {
+  flex: 1;
+}
+
+#check-leakfa {
+  color: white;
+  background-color: #586f91;
+  font-weight: bold;
+}
+
+.icon-link {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+#donate-link:hover #donate-icon {
+  color: #ed5f5f;
+}
+
+#settings-link:hover #settings-icon {
+  color: #5595ff;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
