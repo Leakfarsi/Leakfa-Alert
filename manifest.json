@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Leakfa Alert",
+  "version": "1.0",
+  "description": "Alerts you when a visited site has appeared in a known data breach, checked locally against a public breach list.",
+  "homepage_url": "https://leakfa.com",
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  }
+}

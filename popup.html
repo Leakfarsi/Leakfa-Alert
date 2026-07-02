@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leakfa</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+  <header>
+    <h1 data-i18n="popupTitle">Leakfa Alert</h1>
+    <a href="https://extension.leakfarsi.workers.dev/donate" target="_blank" data-i18n-title="donate" title="Donate" id="donate-link" class="icon-link">
+      <svg id="donate-icon" class="icon-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </a>
+    <a href="settings.html" target="_blank" data-i18n-title="navSettings" title="Settings" id="settings-link" class="icon-link">
+      <svg id="settings-icon" class="icon-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+  </header>
+
+  <div id="response-banner" class="response-banner" style="display: none;"></div>
+
+  <div id="message">
+    <img src="images/light.png" alt="Leakfa Logo">
+    <div>
+      <h2 data-i18n="popupQuestion">Have you an account on this site?</h2>
+      <p id="description" data-i18n="loadingDescription">Loading description...</p>
+    </div>
+  </div>
+  <div id="dismiss-options">
+    <button id="toggle-notification" class="once" data-i18n="notificationOnce">Notification: Once</button>
+    <button id="check-leakfa" data-i18n="checkOnLeakfa">Check on Leakfa</button>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+</html>

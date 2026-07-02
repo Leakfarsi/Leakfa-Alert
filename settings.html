@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leakfa Extension Settings</title>
+  <link rel="icon" href="images/icon32.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link id="theme-stylesheet" rel="stylesheet" href="css/dark-settings.css">
+</head>
+<body>
+  <header>
+    <h1 data-i18n="settingsTitle">Extension Settings</h1>
+  </header>
+
+  <div class="page-body">
+  <div class="sidebar">
+    <img src="images/light.png" alt="Leakfa Logo" class="logo">
+    <h2 class="logo-title">Leakfa</h2>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#settings" class="active" data-i18n="navGeneral">General</a></li>
+        <li><a href="#history" data-i18n="navHistory">History</a></li>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <div class="settings-section" id="settings">
+      <h2 data-i18n="notificationSettingsHeading">Notification Settings</h2>
+      <label>
+        <input type="radio" name="notification-mode" value="once">
+        <span data-i18n="notifModeOnce">Once per Site</span>
+      </label>
+      <label>
+        <input type="radio" name="notification-mode" value="every-time">
+        <span data-i18n="notifModeEveryTime">Always</span>
+      </label>
+      <label>
+        <input type="radio" name="notification-mode" value="off">
+        <span data-i18n="notifModeOff">Off</span>
+      </label>
+
+      <h2 data-i18n="languageSettingsHeading">Language Settings</h2>
+      <label>
+        <input type="radio" name="language" value="fa">
+        <span data-i18n="languagePersian">Persian</span>
+      </label>
+      <label>
+        <input type="radio" name="language" value="en">
+        <span data-i18n="languageEnglish">English</span>
+      </label>
+
+      <h2 data-i18n="themeSettingsHeading">Theme Settings</h2>
+      <label>
+        <input type="radio" name="theme" value="system">
+        <span data-i18n="themeSystemDefault">System Default</span>
+      </label>
+      <label>
+        <input type="radio" name="theme" value="dark">
+        <span data-i18n="themeDark">Dark Mode</span>
+      </label>
+      <label>
+        <input type="radio" name="theme" value="light">
+        <span data-i18n="themeLight">Light Mode</span>
+      </label>
+
+      <h2 data-i18n="domainUpdatesHeading">Domain List Updates</h2>
+      <label>
+        <input type="radio" name="update-frequency" value="weekly">
+        <span data-i18n="updateWeekly">Weekly</span>
+      </label>
+      <label>
+        <input type="radio" name="update-frequency" value="every-30-days">
+        <span data-i18n="updateMonthly">Monthly</span>
+      </label>
+      <label>
+        <input type="radio" name="update-frequency" value="custom-schedule" id="custom-schedule-toggle">
+        <span data-i18n="updateCustom">Custom Schedule (days)</span>
+      </label>
+      <div style="margin-bottom: 10px;">
+        <input type="number" id="custom-schedule-input" data-i18n-placeholder="customDaysPlaceholder" placeholder="Enter days" disabled>
+      </div>
+      <button id="save-custom" style="display: none;" data-i18n="save">Save</button>
+    </div>
+
+    <div class="settings-section" id="history">
+      <h2 data-i18n="recentFindingsHeading">Recent Findings</h2>
+      <p data-i18n="saveHistoryToggleLabel">Save Recent Findings History</p>
+      <label>
+        <input type="radio" name="save-history" value="ON">
+        <span data-i18n="onLabel">ON</span>
+      </label>
+      <label>
+        <input type="radio" name="save-history" value="OFF">
+        <span data-i18n="offLabel">OFF</span>
+      </label>
+      <button id="clear-history-button" data-i18n="clearHistory">Clear History</button>
+      <p id="history-disabled-notice" data-i18n="historyDisabled" style="display: none;">History is turned off, so recent findings aren't being saved.</p>
+      <ul id="history-list"></ul>
+    </div>
+
+    <div class="settings-section" id="about">
+      <h2 data-i18n="aboutHeading">Leakfa Alert</h2>
+      <p><span data-i18n="aboutVersion">Version:</span> <span id="about-version"></span></p>
+      <p data-i18n="aboutLicense">License: MIT License</p>
+      <p data-i18n="aboutPrivacyText">Leakfa Alert checks the domains you visit against a breach list that is downloaded and stored on your device, no browsing data is sent to Leakfa's servers for this. The only network request is the periodic download of that public breach list. The Recent Findings history is also stored only in your browser and is never transmitted anywhere, you can turn it off anytime in General settings.</p>
+      <p data-i18n="aboutDonateText">If you find this extension helpful, consider donating to support further development.</p>
+      <button id="donate-button" data-i18n="donate">Donate</button>
+      <div class="social-links">
+        <a href="https://github.com/Leakfarsi/Leakfa.com" target="_blank" class="social-link" title="Github" aria-label="Github" data-i18n-title="socialGithub">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://x.com/leakfarsi" target="_blank" class="social-link" title="X (Twitter)" aria-label="X (Twitter)" data-i18n-title="socialTwitter">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/leakfarsi" target="_blank" class="social-link" title="YouTube" aria-label="YouTube" data-i18n-title="socialYoutube">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/></svg>
+        </a>
+        <a href="https://t.me/leakfarsi" target="_blank" class="social-link" title="Telegram" aria-label="Telegram" data-i18n-title="socialTelegram">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="mailto:info@leakfa.com" class="social-link" title="Email" aria-label="Email" data-i18n-title="socialEmail">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>
