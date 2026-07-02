@@ -1,0 +1,554 @@
+{
+  "timestamp": "2026-07-03T00:00:00Z",
+  "domains": {
+    "irancell.ir": {
+      "status": "confirmed",
+      "name_fa": "ایرانسل",
+      "name_en": "Irancell",
+      "description_fa": "ایرانسل، بزرگترین اپراتور همراه ایران، دچار نشت اطلاعات بیش از ۳۷ میلیون مشترک شامل نام، شماره تلفن، آدرس و کد ملی شد.",
+      "description_en": "Irancell, Iran's largest mobile operator, suffered a breach exposing over 37 million subscribers' names, phone numbers, addresses, and national ID numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#irancell",
+      "companyResponse": "ignored"
+    },
+    "samsungcenter.com": {
+      "status": "confirmed",
+      "name_fa": "سامسونگ سنتر",
+      "name_en": "Samsung Center",
+      "description_fa": "وب‌سایت نماینده رسمی سامسونگ در ایران، «سامسونگ سنتر»، مورد نفوذ قرار گرفت و اطلاعات حدود ۱۲ هزار مشتری شامل نام، ایمیل، تلفن و رمز عبور هش‌شده افشا شد.",
+      "description_en": "Samsung Center, Samsung's official Iranian reseller site, was breached, exposing roughly 12,000 customers' names, emails, phone numbers, and hashed passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#samsung",
+      "companyResponse": "ignored"
+    },
+    "telegram.org": {
+      "status": "confirmed",
+      "name_fa": "تلگرام",
+      "name_en": "Telegram",
+      "description_fa": "تلگرام در چند نوبت دچار نشت اطلاعات کاربران شد؛ از جمله یک بانک اطلاعاتی محافظت‌نشده که توسط محقق امنیتی باب دیاچنکو کشف شد و اطلاعات ۳۵ میلیون حساب تلگرام و ۴ میلیون حساب اینستاگرام ایرانی را افشا کرد، و همچنین پایگاه داده‌ای متعلق به بیش از ۳۰ میلیون حساب کاربری تلگرام (کاربران ایرانی و روسی) که در بازارهای دارک وب برای فروش قرار گرفت. تلگرام در واکنش به نشت نخست اعلام کرد که این اتفاق از طریق کلاینت‌های غیررسمی رخ داده که با این شرکت ارتباطی ندارند.",
+      "description_en": "Telegram has been linked to multiple data exposures: an unprotected database discovered by security researcher Bob Diachenko exposed 35 million Telegram accounts and 4 million Instagram accounts belonging to Iranian users, and separately, a database covering over 30 million Telegram accounts (Iranian and Russian users) was put up for sale on dark-web markets. Telegram responded to the first incident by stating it occurred through unofficial third-party clients unaffiliated with the company.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#telegram",
+      "companyResponse": "partial"
+    },
+    "iranplast.nipc.ir": {
+      "status": "confirmed",
+      "name_fa": "ایران پلاست",
+      "name_en": "Iran Plast",
+      "description_fa": "وب‌سایت نمایشگاه بین‌المللی ایران پلاست دچار نشت اطلاعات حدود ۱۷ هزار بازرگان شرکت‌کننده شد.",
+      "description_en": "The Iran Plast international exhibition website leaked information on roughly 17,000 participating traders.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#iranplast",
+      "companyResponse": "ignored"
+    },
+    "apktops.ir": {
+      "status": "confirmed",
+      "name_fa": "برترین‌های اندروید",
+      "name_en": "Apktops",
+      "description_fa": "وب‌سایت دانلود اپلیکیشن اندروید «برترین‌های اندروید» دچار نشت اطلاعات حدود ۳ هزار حساب کاربری شد.",
+      "description_en": "The Android app site Apktops leaked around 3,000 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#apktops",
+      "companyResponse": "ignored"
+    },
+    "crackingcenter.ir": {
+      "status": "confirmed",
+      "name_fa": "انجمن کرکینگ سنتر",
+      "name_en": "Cracking Center",
+      "description_fa": "انجمن کرکینگ سنتر دچار نشت اطلاعات حدود ۱٬۴۰۰ حساب کاربری شد.",
+      "description_en": "The Cracking Center forum leaked roughly 1,400 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#cc",
+      "companyResponse": "ignored"
+    },
+    "irsecteam.org": {
+      "status": "confirmed",
+      "name_fa": "تیم امنیتی ایران",
+      "name_en": "Iran Security Team",
+      "description_fa": "وب‌سایت تیم امنیتی ایران مورد نفوذ قرار گرفت و اطلاعات بیش از ۶ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
+      "description_en": "The Iran Security Team website was breached, exposing over 6,000 users' usernames, emails, and hashed passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#irsecteam",
+      "companyResponse": "ignored"
+    },
+    "deltafox.ir": {
+      "status": "confirmed",
+      "name_fa": "دلتافوکس",
+      "name_en": "Deltafox",
+      "description_fa": "دلتافوکس، مرجع دانلود بازی‌های رایانه‌ای، مورد نفوذ قرار گرفت و اطلاعات حدود ۲۳ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
+      "description_en": "Deltafox, a PC game download site, was breached, exposing about 23,000 users' usernames, emails, and hashed passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#deltafox",
+      "companyResponse": "ignored"
+    },
+    "facenama.com": {
+      "status": "confirmed",
+      "name_fa": "فیس نما",
+      "name_en": "Facenama",
+      "description_fa": "فیس‌نما، بزرگترین شبکه اجتماعی فارسی‌زبان، مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۱۶ هزار کاربر شامل ایمیل، نام و رمز عبور هش‌شده افشا شد.",
+      "description_en": "Facenama, the largest Persian-language social network, was breached, exposing over 116,000 users' emails, names, and hashed passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#facenama",
+      "companyResponse": "ignored"
+    },
+    "softgozar.com": {
+      "status": "confirmed",
+      "name_fa": "سافت گذر",
+      "name_en": "Softgozar",
+      "description_fa": "وب‌سایت سافت‌گذر دچار نشت اطلاعات حدود ۴٬۴۰۰ حساب کاربری شد.",
+      "description_en": "The Softgozar website leaked roughly 4,400 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#softgozar",
+      "companyResponse": "ignored"
+    },
+    "irlanguage.com": {
+      "status": "confirmed",
+      "name_fa": "مرجع زبان ایرانیان",
+      "name_en": "Iranian Language Reference",
+      "description_fa": "آموزشگاه آنلاین «مرجع زبان ایرانیان» مورد نفوذ قرار گرفت و اطلاعات حدود ۲۴ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
+      "description_en": "Iranian Language Reference, an online language school, was breached, exposing about 24,000 users' usernames, emails, and hashed passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#irlanguage",
+      "companyResponse": "ignored"
+    },
+    "pnu.ac.ir": {
+      "status": "confirmed",
+      "name_fa": "دانشگاه پیام‌نور",
+      "name_en": "Payame Noor University",
+      "description_fa": "دانشگاه پیام‌نور در چند نوبت دچار نشت اطلاعات شد؛ از جمله اطلاعات هویتی دانشجویان و همچنین سامانه گلستان (گواهینامه موقت) شامل کد ملی، شماره دانشجویی و شماره تلفن.",
+      "description_en": "Payame Noor University suffered multiple breaches, including student identity records and its Golestan (temporary certificate) system, exposing national IDs, student numbers, and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#pnu",
+      "companyResponse": "ignored"
+    },
+    "rozblog.com": {
+      "status": "confirmed",
+      "name_fa": "رزبلاگ",
+      "name_en": "Rozblog",
+      "description_fa": "رزبلاگ، یکی از ارائه‌دهندگان خدمات وبلاگ فارسی، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۸۸ هزار کاربر شامل نام، رمز عبور و آدرس ایمیل افشا شد.",
+      "description_en": "Rozblog, a Persian blogging platform, was breached, exposing over 288,000 users' names, passwords, and email addresses.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#rozblog",
+      "companyResponse": "ignored"
+    },
+    "royalfa.ir": {
+      "status": "confirmed",
+      "name_fa": "رویال فا",
+      "name_en": "Royalfa",
+      "description_fa": "وب‌سایت رویال فا دچار نشت اطلاعات حدود ۱٬۶۰۰ حساب کاربری شد.",
+      "description_en": "The Royalfa website leaked roughly 1,600 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#royalfa",
+      "companyResponse": "ignored"
+    },
+    "irib.ir": {
+      "status": "confirmed",
+      "name_fa": "سازمان صدا و سیما",
+      "name_en": "IRIB",
+      "description_fa": "سازمان صدا و سیما دچار نشت اطلاعات حدود ۳٬۰۷۰ حساب کاربری شد.",
+      "description_en": "The IRIB news agency leaked roughly 3,070 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#irib",
+      "companyResponse": "ignored"
+    },
+    "sharif.ir": {
+      "status": "confirmed",
+      "name_fa": "دانشگاه صنعتی شریف",
+      "name_en": "Sharif University of Technology",
+      "description_fa": "یکی از سرورهای دانشگاه صنعتی شریف مورد نفوذ قرار گرفت و اطلاعات هویتی کارمندان، اساتید و دانشجویان شامل کد ملی و شماره تلفن افشا شد.",
+      "description_en": "A server belonging to Sharif University of Technology was breached, exposing staff, faculty, and student identity data including national IDs and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#sharif",
+      "companyResponse": "ignored"
+    },
+    "bsi.ir": {
+      "status": "confirmed",
+      "name_fa": "بانک صادرات ایران",
+      "name_en": "Bank Saderat Iran",
+      "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۶۳ میلیون مشتری بانک صادرات ایران شامل شماره حساب، شماره کارت و ایمیل برای فروش قرار گرفت.",
+      "description_en": "A database containing over 63 million Bank Saderat Iran customers' account numbers, card numbers, and emails was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#bsi",
+      "companyResponse": "ignored"
+    },
+    "tums.ac.ir": {
+      "status": "confirmed",
+      "name_fa": "دانشگاه علوم پزشکی تهران",
+      "name_en": "Tehran University of Medical Sciences",
+      "description_fa": "دانشگاه علوم پزشکی تهران در چند نوبت دچار نشت اطلاعات شد؛ از جمله افشای اطلاعات دانشجویان و همچنین سامانه فیش حقوقی کارمندان شامل کد ملی، ایمیل و رمز عبور.",
+      "description_en": "Tehran University of Medical Sciences suffered multiple breaches, including student records and a payroll system leak exposing staff national IDs, emails, and passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#tums",
+      "companyResponse": "ignored"
+    },
+    "karbank.ir": {
+      "status": "confirmed",
+      "name_fa": "کاربانک",
+      "name_en": "Karbank",
+      "description_fa": "کاربانک، سرویس کاریابی و آگهی شغلی، مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۰۰ هزار کاربر شامل نام، رمز عبور و شماره تلفن افشا شد.",
+      "description_en": "Karbank, a job search and listing service, was breached, exposing over 100,000 users' names, passwords, and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#karbank",
+      "companyResponse": "ignored"
+    },
+    "ponisha.ir": {
+      "status": "confirmed",
+      "name_fa": "پونیشا",
+      "name_en": "Ponisha",
+      "description_fa": "پونیشا، سرویس فریلنسری و پروژه‌های آنلاین، در دو نوبت دچار نشت اطلاعات شد که مجموعاً اطلاعات بیش از ۲۷۰ هزار کاربر شامل نام، کد ملی و شماره تلفن را افشا کرد.",
+      "description_en": "Ponisha, an online freelancing and project platform, suffered two separate breaches exposing over 270,000 users' names, national IDs, and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#ponisha",
+      "companyResponse": "partial"
+    },
+    "asiatech.ir": {
+      "status": "confirmed",
+      "name_fa": "آسیاتک",
+      "name_en": "Asiatech",
+      "description_fa": "آسیاتک، یکی از ارائه‌دهندگان خدمات اینترنت در ایران، دچار نشت اطلاعات حدود ۲۳ میلیون کاربر شامل نام، کد ملی و شماره تلفن شد.",
+      "description_en": "Asiatech, an Iranian internet service provider, suffered a breach exposing about 23 million users' names, national IDs, and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#asiatech",
+      "companyResponse": "partial"
+    },
+    "facebook.com": {
+      "status": "confirmed",
+      "name_fa": "فیس‌بوک",
+      "name_en": "Facebook",
+      "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۵۳۰ میلیون کاربر فیس‌بوک در سراسر جهان (از جمله ۱.۶ میلیون کاربر ایرانی) برای فروش قرار گرفت.",
+      "description_en": "A database containing over 530 million Facebook users worldwide (including 1.6 million Iranian users) was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#facebook",
+      "companyResponse": "acknowledged"
+    },
+    "aichallenge.ir": {
+      "status": "confirmed",
+      "name_fa": "نبرد هوش مصنوعی شریف",
+      "name_en": "Sharif AI Challenge",
+      "description_fa": "رویداد «نبرد هوش مصنوعی شریف» دچار نشت اطلاعات حدود ۱٬۷۰۰ حساب کاربری شرکت‌کننده شد.",
+      "description_en": "The Sharif AI Challenge event leaked roughly 1,700 participant accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#sharifai",
+      "companyResponse": "ignored"
+    },
+    "raychat.io": {
+      "status": "confirmed",
+      "name_fa": "رایچت",
+      "name_en": "Raychat",
+      "description_fa": "رایچت، پلتفرم گفتگوی آنلاین، دچار نشت داده‌ای شد که اطلاعات بیش از ۱۵۰ میلیون خط شامل نام، ایمیل، شماره تلفن و رمز عبور را افشا کرد.",
+      "description_en": "Raychat, an online chat platform, suffered a breach exposing over 150 million records including names, emails, phone numbers, and passwords.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#raychat",
+      "companyResponse": "acknowledged"
+    },
+    "radargps.org": {
+      "status": "confirmed",
+      "name_fa": "رادار جی‌پی‌اس",
+      "name_en": "Radar GPS",
+      "description_fa": "وب‌سایت رادار جی‌پی‌اس دچار نشت اطلاعات حدود ۱٬۵۵۰ حساب کاربری شد.",
+      "description_en": "The Radar GPS website leaked roughly 1,550 user accounts.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#radargps",
+      "companyResponse": "ignored"
+    },
+    "adliran.ir": {
+      "status": "confirmed",
+      "name_fa": "قوه قضائیه",
+      "name_en": "Iran Judiciary",
+      "description_fa": "قوه قضائیه در چند نوبت دچار نشت اطلاعات شد؛ از جمله سامانه احراز هویت ثنا (بیش از ۲۵ میلیون کاربر شامل کد ملی، تاریخ تولد و رمزهای هش‌شده) و همچنین سامانه مدیریت پرونده‌های قضایی که اطلاعات شخصی و هویتی میلیون‌ها شهروند ایرانی را افشا کرد.",
+      "description_en": "Iran's judiciary suffered multiple breaches, including the Sana authentication system (over 25 million users' national IDs, birth dates, and hashed credentials) and the judicial case-management system, which exposed millions of Iranian citizens' personal and identity data.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#sana",
+      "companyResponse": "ignored"
+    },
+    "etoudplus.ir": {
+      "status": "confirmed",
+      "name_fa": "اتود پلاس",
+      "name_en": "Etoud Plus",
+      "description_fa": "سامانه آموزشی اتود پلاس مورد نفوذ قرار گرفت و اطلاعات بیش از ۳۴ هزار دانش‌آموز/معلم به همراه فهرست مخاطبین حدود ۱۸۰ هزار نفر از خانواده‌های آن‌ها افشا شد.",
+      "description_en": "The Etoud Plus education platform was breached, exposing over 34,000 students/teachers plus a contact list of roughly 180,000 family members.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#etoudplus",
+      "companyResponse": "ignored"
+    },
+    "moi.ir": {
+      "status": "confirmed",
+      "name_fa": "وزارت کشور",
+      "name_en": "Ministry of Interior",
+      "description_fa": "سامانه ثبت سازمان‌های مردم‌نهاد وزارت کشور دچار نشت اطلاعات حدود ۱۳۰ هزار کاربر شامل کد ملی و آدرس ایمیل شد.",
+      "description_en": "The Ministry of Interior's NGO registration system leaked about 130,000 users' national IDs and email addresses.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#moi",
+      "companyResponse": "ignored"
+    },
+    "cheraghcheck.ir": {
+      "status": "confirmed",
+      "name_fa": "انجمن چراغ چک",
+      "name_en": "Cheraghcheck",
+      "description_fa": "انجمن چراغ چک، مرجع تخصصی برق خودرو، دچار نشت اطلاعات حدود ۶ هزار کاربر شامل نام کاربری، رمز عبور و ایمیل شد.",
+      "description_en": "The Cheraghcheck automotive electronics forum leaked about 6,000 users' usernames, passwords, and emails.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#cheraghcheck",
+      "companyResponse": "ignored"
+    },
+    "badesaba.ir": {
+      "status": "confirmed",
+      "name_fa": "تقویم اذان‌گو بادصبا",
+      "name_en": "Badesaba",
+      "description_fa": "سرور مشترک میزبانی چند نرم‌افزار مذهبی ایرانی، از جمله «تقویم اذان‌گو بادصبا»، «نرم‌افزار اسلامی پرسمان» و «تقویم روزشمار تشیع ضحی»، مورد نفوذ قرار گرفت و اطلاعات کاربران این نرم‌افزارها شامل نام، رمز عبور، شماره تلفن و شناسه دستگاه افشا شد. چند نرم‌افزار دیگر که از همین سرور مشترک استفاده می‌کردند به‌صورت جداگانه در فهرست ثبت شده‌اند.",
+      "description_en": "A shared server hosting several Iranian religious apps, including the prayer-time calendar Badesaba, the Islamic app Porseman, and the Shia calendar Rozsh, was breached, exposing users' names, passwords, phone numbers, and device IDs across these apps. Several other apps that used the same shared server are listed separately.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#badesaba",
+      "companyResponse": "ignored"
+    },
+    "bankmellat.ir": {
+      "status": "confirmed",
+      "name_fa": "بانک ملت",
+      "name_en": "Bank Mellat",
+      "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۳۰ میلیون مشتری بانک ملت شامل کد ملی، تاریخ تولد و آدرس برای فروش قرار گرفت.",
+      "description_en": "A database containing over 30 million Bank Mellat customers' national IDs, birth dates, and addresses was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#bankmellat",
+      "companyResponse": "ignored"
+    },
+    "rahvar120.ir": {
+      "status": "confirmed",
+      "name_fa": "پلیس راهور",
+      "name_en": "Traffic Police (Rahvar)",
+      "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۱۳ میلیون خودرو و موتورسیکلت ثبت‌شده نزد پلیس راهور، شامل نام مالک، کد ملی و شماره پلاک، برای فروش قرار گرفت.",
+      "description_en": "A database containing over 13 million vehicle and motorcycle registrations held by Iran's traffic police, including owner names, national IDs, and plate numbers, was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#rahvarcar",
+      "companyResponse": "ignored"
+    },
+    "kanoon.ir": {
+      "status": "confirmed",
+      "name_fa": "کانون قلم‌چی",
+      "name_en": "Kanoon (Ghalamchi)",
+      "description_fa": "کانون فرهنگی آموزش قلم‌چی مورد نفوذ قرار گرفت و اطلاعات بیش از ۴٫۳ میلیون دانش‌آموز شامل کد ملی و تاریخ تولد افشا شد.",
+      "description_en": "The Kanoon (Ghalamchi) educational institute was breached, exposing over 4.3 million students' national IDs and birth dates.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#kanoon",
+      "companyResponse": "ignored"
+    },
+    "classino.com": {
+      "status": "confirmed",
+      "name_fa": "کلاسینو",
+      "name_en": "Classino",
+      "description_fa": "کلاسینو، آموزشگاه آنلاین کنکور، دچار نشت اطلاعات حدود ۳۰ هزار کاربر شامل کد ملی و شماره تلفن شد.",
+      "description_en": "Classino, an online exam-prep academy, leaked about 30,000 users' national IDs and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#classino",
+      "companyResponse": "ignored"
+    },
+    "post.ir": {
+      "status": "confirmed",
+      "name_fa": "اداره پست",
+      "name_en": "Iran Post",
+      "description_fa": "پایگاه داده‌ای متعلق به اداره پست سرپل ذهاب حاوی اطلاعات بیش از ۵ هزار مشتری شامل کد ملی و شماره تلفن برای فروش قرار گرفت.",
+      "description_en": "A database from Iran's postal service (Sarpol-e Zahab branch) containing over 5,000 customers' national IDs and phone numbers was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#post",
+      "companyResponse": "ignored"
+    },
+    "pmo.ir": {
+      "status": "confirmed",
+      "name_fa": "سازمان بنادر و دریانوردی",
+      "name_en": "Ports and Maritime Organization",
+      "description_fa": "سازمان بنادر و دریانوردی ایران هدف حمله سایبری قرار گرفت و حدود ۱۵ گیگابایت داده شامل اطلاعات کارمندان، مشتریان و قراردادها افشا شد.",
+      "description_en": "Iran's Ports and Maritime Organization suffered a cyberattack that exposed about 15GB of data including employee, customer, and contract records.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#pmo",
+      "companyResponse": "partial"
+    },
+    "bmi.ir": {
+      "status": "confirmed",
+      "name_fa": "بانک ملی ایران",
+      "name_en": "Bank Melli Iran",
+      "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۷۰ میلیون مشتری بانک ملی ایران شامل نام، کد ملی و تاریخ تولد برای فروش قرار گرفت.",
+      "description_en": "A database containing over 70 million Bank Melli Iran customers' names, national IDs, and birth dates was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#bmi",
+      "companyResponse": "ignored"
+    },
+    "kntu.ac.ir": {
+      "status": "confirmed",
+      "name_fa": "دانشگاه خواجه نصیر",
+      "name_en": "K. N. Toosi University of Technology",
+      "description_fa": "یکی از سامانه‌های دانشگاه صنعتی خواجه نصیرالدین طوسی مورد نفوذ قرار گرفت و اطلاعات هویتی حدود ۱۰۰ هزار دانشجو شامل کد ملی افشا شد.",
+      "description_en": "A system belonging to K. N. Toosi University of Technology was breached, exposing identity data of roughly 100,000 students, including national IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#kntu",
+      "companyResponse": "partial"
+    },
+    "instagram.com": {
+      "status": "confirmed",
+      "name_fa": "اینستاگرام",
+      "name_en": "Instagram",
+      "description_fa": "به گفته محقق امنیتی باب دیاچنکو، گروه هکری «سک‌نرد» با سوءاستفاده از یک سرور Elasticsearch با پیکربندی نادرست، اطلاعات میلیون‌ها کاربر ایرانی اینستاگرام شامل نام، شناسه کاربری، شماره تلفن، آدرس ایمیل و تصویر پروفایل را جمع‌آوری کرد که ظاهراً به نهادهای اطلاعاتی ایران منتقل می‌شد.",
+      "description_en": "According to security researcher Bob Diachenko, a hacking group known as Secnerd exploited a misconfigured Elasticsearch server to harvest millions of Iranian Instagram users' names, user IDs, phone numbers, emails, and profile pictures, reportedly passing the data to Iranian intelligence bodies.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#secnerd",
+      "companyResponse": "partial"
+    },
+    "bargheman.com": {
+      "status": "confirmed",
+      "name_fa": "برق من",
+      "name_en": "Bargheman",
+      "description_fa": "سامانه برق‌من، پرتال پرداخت قبض برق، دچار نشت اطلاعات بیش از ۴۸۰ هزار کاربر شامل کد ملی و شماره تلفن شد.",
+      "description_en": "Bargheman, the electricity bill payment portal, leaked over 480,000 users' national IDs and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#bargheman",
+      "companyResponse": "ignored"
+    },
+    "mcls.gov.ir": {
+      "status": "confirmed",
+      "name_fa": "وزارت تعاون، کار و رفاه اجتماعی",
+      "name_en": "Ministry of Cooperatives, Labour and Social Welfare",
+      "description_fa": "بانک اطلاعاتی اداره کل تعاون، کار و رفاه اجتماعی استان تهران حاوی اطلاعات بیش از ۶۳۰ هزار کارمند شامل کد ملی و آدرس برای فروش قرار گرفت.",
+      "description_en": "A database from Tehran's Ministry of Cooperatives, Labour and Social Welfare office, containing over 630,000 employees' national IDs and addresses, was put up for sale.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#mcls",
+      "companyResponse": "ignored"
+    },
+    "samalive.ir": {
+      "status": "confirmed",
+      "name_fa": "سامانه آموزشی سمالایو",
+      "name_en": "Samalive",
+      "description_fa": "سامانه آموزشی سمالایو مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۰۰ هزار دانشجو شامل کد ملی و شماره تلفن افشا شد.",
+      "description_en": "The Samalive educational platform was breached, exposing over 200,000 students' national IDs and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#samalive",
+      "companyResponse": "ignored"
+    },
+    "tapsi.ir": {
+      "status": "confirmed",
+      "name_fa": "تپسی",
+      "name_en": "Tapsi",
+      "description_fa": "تپسی، یکی از بزرگترین سرویس‌های تاکسی اینترنتی ایران، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۶ میلیون مسافر و ۳ میلیون راننده شامل هویت و سفرها افشا شد.",
+      "description_en": "Tapsi, one of Iran's largest ride-hailing services, was breached, exposing identity and trip data for over 26 million passengers and 3 million drivers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#tapsi",
+      "companyResponse": "ignored"
+    },
+    "iranlaptopparts.com": {
+      "status": "confirmed",
+      "name_fa": "لپ‌تاپ پارت",
+      "name_en": "Laptop Parts",
+      "description_fa": "وب‌سایت لپ‌تاپ‌پارت مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۷ هزار کاربر شامل رمز عبور و شماره تلفن افشا شد.",
+      "description_en": "The Laptop Parts website was breached, exposing over 17,000 users' passwords and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#laptopparts",
+      "companyResponse": "ignored"
+    },
+    "ipresta.ir": {
+      "status": "confirmed",
+      "name_fa": "آی پرستا",
+      "name_en": "iPresta",
+      "description_fa": "آی‌پرستا، نماینده رسمی پرستاشاپ در ایران، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۰ هزار کاربر شامل ایمیل و شناسه کاربری افشا شد.",
+      "description_en": "iPresta, PrestaShop's official Iranian partner, was breached, exposing over 20,000 users' emails and usernames.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#ipresta",
+      "companyResponse": "ignored"
+    },
+    "behansystem.com": {
+      "status": "confirmed",
+      "name_fa": "بهان سیستم",
+      "name_en": "Behan System",
+      "description_fa": "بهان سیستم، فروشنده قطعات لپ‌تاپ، مورد نفوذ قرار گرفت و اطلاعات بیش از ۴۱ هزار کاربر شامل نام و شماره تلفن افشا شد.",
+      "description_en": "Behan System, a laptop parts retailer, was breached, exposing over 41,000 users' names and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#behansystem",
+      "companyResponse": "ignored"
+    },
+    "shenoto.com": {
+      "status": "confirmed",
+      "name_fa": "شنوتو",
+      "name_en": "Shenoto",
+      "description_fa": "شنوتو، پلتفرم پخش و اشتراک‌گذاری فایل‌های صوتی، دچار نشت اطلاعات حدود ۱۰ هزار کاربر شامل نام و ایمیل شد.",
+      "description_en": "Shenoto, an audio streaming and sharing platform, leaked about 10,000 users' names and emails.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#shenoto",
+      "companyResponse": "ignored"
+    },
+    "nazemonweb.ir": {
+      "status": "confirmed",
+      "name_fa": "ناظمون",
+      "name_en": "Nazemon",
+      "description_fa": "ناظمون، سامانه مدیریت مدارس هوشمند، دچار نشت اطلاعات حدود ۱۰۰ هزار والد و دانش‌آموز شامل کد ملی و شماره تلفن شد.",
+      "description_en": "Nazemon, a smart-school management system, leaked data on about 100,000 parents and students, including national IDs and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#nazemon",
+      "companyResponse": "ignored"
+    },
+    "dadrah.ir": {
+      "status": "confirmed",
+      "name_fa": "دادراه",
+      "name_en": "Dadrah",
+      "description_fa": "دادراه، سامانه ارتباطی مردم با وکلا، دچار نشت اطلاعات بیش از ۵۰ هزار وکیل، مشاور حقوقی و کاربر شامل کد ملی، رمز عبور و شماره تلفن شد.",
+      "description_en": "Dadrah, a platform connecting the public with lawyers, leaked data on over 50,000 lawyers, legal advisors, and users, including national IDs, passwords, and phone numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#dadrah",
+      "companyResponse": "ignored"
+    },
+    "mci.ir": {
+      "status": "confirmed",
+      "name_fa": "همراه اول",
+      "name_en": "Hamrah-e Aval (MCI)",
+      "description_fa": "به ادعای گروه هکری ShadowBits، پایگاه داده همراه اول مورد نفوذ قرار گرفت و اطلاعات ۳۰ میلیون مشترک شامل کد ملی و آدرس پستی افشا شد.",
+      "description_en": "Hackers calling themselves ShadowBits claimed to have breached Hamrah-e Aval (MCI), exposing 30 million subscribers' national IDs and postal addresses.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#mci",
+      "companyResponse": "ignored"
+    },
+    "banksepah.ir": {
+      "status": "confirmed",
+      "name_fa": "بانک سپه",
+      "name_en": "Bank Sepah",
+      "description_fa": "به ادعای گروه هکری Codebreakers، پایگاه داده بانک سپه مورد نفوذ قرار گرفت و اطلاعات مالی و هویتی ۴۲ میلیون مشتری در خطر افشا قرار گرفت.",
+      "description_en": "Hackers calling themselves Codebreakers claimed to have breached Bank Sepah, putting the financial and identity data of 42 million customers at risk.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#sepah",
+      "companyResponse": "partial"
+    },
+    "ihio.gov.ir": {
+      "status": "confirmed",
+      "name_fa": "سازمان بیمه سلامت ایران",
+      "name_en": "Iran Health Insurance Organization",
+      "description_fa": "سازمان بیمه سلامت ایران هدف حمله سایبری قرار گرفت و اطلاعات میلیون‌ها بیمه‌شده شامل کد ملی، تاریخ تولد و شناسه بیمه افشا شد.",
+      "description_en": "Iran Health Insurance Organization suffered a cyberattack exposing millions of insured individuals' national IDs, birth dates, and insurance IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#ihio",
+      "companyResponse": "ignored"
+    },
+    "iauyazd.ac.ir": {
+      "status": "confirmed",
+      "name_fa": "دانشگاه آزاد اسلامی واحد یزد",
+      "name_en": "Islamic Azad University, Yazd Branch",
+      "description_fa": "دانشگاه آزاد اسلامی واحد یزد دچار نشت اطلاعات دانشجویان و اساتید شامل کد ملی و تاریخ تولد شد.",
+      "description_en": "Islamic Azad University's Yazd branch leaked student and faculty data including national IDs and birth dates.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#iauyazd",
+      "companyResponse": "ignored"
+    },
+    "ttac.ir": {
+      "status": "confirmed",
+      "name_fa": "سازمان غذا و دارو",
+      "name_en": "Food and Drug Organization",
+      "description_fa": "سامانه زنجیره تامین سازمان غذا و دارو دچار نشت اطلاعات بیش از ۷ هزار کاربر شامل کد ملی و شماره موبایل شد.",
+      "description_en": "The Food and Drug Organization's supply chain system leaked over 7,000 users' national IDs and mobile numbers.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#ttac",
+      "companyResponse": "ignored"
+    },
+    "safirstores.com": {
+      "status": "confirmed",
+      "name_fa": "فروشگاه اینترنتی سفیر",
+      "name_en": "Safir Stores",
+      "description_fa": "فروشگاه اینترنتی سفیر مورد حمله سایبری قرار گرفت و اطلاعات بیش از ۱۷۰ هزار کاربر شامل کد ملی، سفارش‌ها و پرداخت‌ها افشا شد.",
+      "description_en": "Safir Stores, an online retailer, was breached, exposing over 170,000 users' national IDs, orders, and payment details.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#safirstores",
+      "companyResponse": "ignored"
+    },
+    "applygermany.com": {
+      "status": "confirmed",
+      "name_fa": "اپلای جرمنی",
+      "name_en": "ApplyGermany",
+      "description_fa": "پلتفرم اپلای جرمنی، فعال در حوزه مهاجرت تحصیلی، دچار نشت اطلاعات بیش از ۸ هزار کاربر شامل کد ملی، رمز عبور و تصویر پاسپورت شد.",
+      "description_en": "ApplyGermany, an education-migration platform, leaked over 8,000 users' national IDs, passwords, and passport images.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#applygermany",
+      "companyResponse": "ignored"
+    },
+    "mymafatih.com": {
+      "status": "confirmed",
+      "name_fa": "مفاتیح صوتی باب النعیم",
+      "name_en": "Mafatih Sote Bab al-Naeem",
+      "description_fa": "سرور میزبانی مشترک چند نرم‌افزار دینی «شرکت پیشگامان موج همراه» مورد نفوذ قرار گرفت و اطلاعات حدود ۲.۲ میلیون کاربر نرم‌افزار «مفاتیح صوتی باب النعیم» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه افشا شد.",
+      "description_en": "A shared hosting server for several religious apps by the same company was breached, exposing about 2.2 million users of the 'Mafatih Sote Bab al-Naeem' app, including names, usernames, passwords, phone numbers, device models, and device IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#bobn",
+      "companyResponse": "ignored"
+    },
+    "myghoran.com": {
+      "status": "confirmed",
+      "name_fa": "قرآن صوتی حبل المتين",
+      "name_en": "Audio Quran Hablul Matin",
+      "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۲.۹ میلیون کاربر نرم‌افزار «قرآن صوتی حبل‌المتین» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
+      "description_en": "The same shared-server breach exposed about 2.9 million users of the 'Audio Quran Hablul Matin' app, including names, usernames, passwords, phone numbers, device models, and device IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#hablm",
+      "companyResponse": "ignored"
+    },
+    "balagh.ir": {
+      "status": "confirmed",
+      "name_fa": "نهج البلاغه صوتی کیمیا",
+      "name_en": "Audio Nahj al-Balagha Kimia",
+      "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۲۲۵ هزار کاربر نرم‌افزار «نهج‌البلاغه صوتی کیمیا» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
+      "description_en": "The same shared-server breach exposed about 225,000 users of the 'Audio Nahj al-Balagha Kimia' app, including names, usernames, passwords, phone numbers, device models, and device IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#kimia",
+      "companyResponse": "ignored"
+    },
+    "nomrebartar.com": {
+      "status": "confirmed",
+      "name_fa": "رسانه آموزشی نمره بهتر",
+      "name_en": "Nomre Bartar Educational Media",
+      "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۴۲ هزار کاربر «رسانه آموزشی نمره بهتر» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
+      "description_en": "The same shared-server breach exposed about 42,000 users of the 'Nomre Bartar' educational media app, including names, usernames, passwords, phone numbers, device models, and device IDs.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#nomre",
+      "companyResponse": "ignored"
+    },
+    "x.com": {
+      "status": "confirmed",
+      "name_fa": "توییتر",
+      "name_en": "Twitter",
+      "description_fa": "به گفته محقق امنیتی باب دیاچنکو، گروه هکری «سک‌نرد» با سوءاستفاده از یک سرور Elasticsearch با پیکربندی نادرست، اطلاعات میلیون‌ها کاربر ایرانی توییتر شامل نام، شناسه کاربری، شماره تلفن و آدرس ایمیل را جمع‌آوری کرد که ظاهراً به نهادهای اطلاعاتی ایران منتقل می‌شد.",
+      "description_en": "According to security researcher Bob Diachenko, a hacking group known as Secnerd exploited a misconfigured Elasticsearch server to harvest millions of Iranian Twitter users' names, user IDs, phone numbers, and emails, reportedly passing the data to Iranian intelligence bodies.",
+      "relatedURL": "https://extension.leakfarsi.workers.dev/leaks#secnerdt",
+      "companyResponse": "partial"
+    }
+  }
+}
