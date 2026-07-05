@@ -1,12 +1,12 @@
 # 🛡️ افزونه کروم دیده‌بان لیکفا
 **Leakfa Alert Chrome Extension**
 
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)](#)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-success)](https://developer.chrome.com/docs/extensions)
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chromewebstore.google.com/detail/mlfokglbmlcembbcamgniolbcghonbaj)
+[![Version](https://img.shields.io/github/v/release/Leakfarsi/leakfa-alert?label=Version)](https://github.com/Leakfarsi/Leakfa-Alert/releases/latest)
 [![Website](https://img.shields.io/badge/Website-leakfa.com-blue.svg)](https://leakfa.com)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)](#)
-[![Version](https://img.shields.io/github/v/release/Leakfarsi/leakfa-extension?label=Version)](https://github.com/Leakfarsi/leakfa-extension/releases)
 
 افزونه **دیده‌بان لیکفا** به‌صورت خودکار دامنه وب‌سایت‌هایی را که بازدید می‌کنید با پایگاه داده نشت‌های اطلاعاتی لیکفا مقایسه می‌کند و در صورتی که آن وب‌سایت سابقه نشت اطلاعات داشته باشد، به شما اطلاع می‌دهد.
 
