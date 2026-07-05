@@ -5,7 +5,7 @@
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chromewebstore.google.com/detail/mlfokglbmlcembbcamgniolbcghonbaj)
 [![Website](https://img.shields.io/badge/Website-leakfa.com-blue.svg)](https://leakfa.com)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)](#)
-[![Version](https://img.shields.io/github/v/release/Leakfarsi/leakfa-extension?label=Version)](https://github.com/Leakfarsi/leakfa-extension/releases)
+[![Version](https://img.shields.io/github/v/release/Leakfarsi/leakfa-extension?label=Version)](https://github.com/Leakfarsi/Leakfa-Alert/releases/tag/v1.0.0)
 
 Leakfa Chrome Extension automatically checks the domain of every website you visit against Leakfa's database of known data breaches.
 
