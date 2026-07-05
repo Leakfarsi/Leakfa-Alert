@@ -69,3 +69,5 @@ Chrome → Extensions → Developer Mode → Load unpacked
 ## 📄 مجوز
 
 این پروژه تحت مجوز MIT منتشر شده است.
+
+📄 [View English Version / مشاهده نسخه انگلیسی](README_EN.md)
