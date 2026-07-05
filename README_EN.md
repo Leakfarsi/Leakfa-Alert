@@ -57,7 +57,7 @@ Install the extension directly from the Chrome Web Store.
 ## 🛠 Development
 
 ```bash
-git clone https://github.com/Leakfarsi/leakfa-extension.git
+git clone https://github.com/Leakfarsi/leakfa-alert.git
 ```
 
 Then open:
