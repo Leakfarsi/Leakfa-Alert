@@ -2,7 +2,6 @@
   "timestamp": "2026-07-25T00:00:00Z",
   "domains": {
     "irancell.ir": {
-      "status": "confirmed",
       "name_fa": "ایرانسل",
       "name_en": "Irancell",
       "description_fa": "ایرانسل، بزرگترین اپراتور همراه ایران، دچار نشت اطلاعات بیش از ۳۷ میلیون مشترک شامل نام، شماره تلفن، آدرس و کد ملی شد.",
@@ -11,7 +10,6 @@
       "companyResponse": "ignored"
     },
     "samsungcenter.com": {
-      "status": "confirmed",
       "name_fa": "سامسونگ سنتر",
       "name_en": "Samsung Center",
       "description_fa": "وب‌سایت نماینده رسمی سامسونگ در ایران، «سامسونگ سنتر»، مورد نفوذ قرار گرفت و اطلاعات حدود ۱۲ هزار مشتری شامل نام، ایمیل، تلفن و رمز عبور هش‌شده افشا شد.",
@@ -20,7 +18,6 @@
       "companyResponse": "ignored"
     },
     "telegram.org": {
-      "status": "confirmed",
       "name_fa": "تلگرام",
       "name_en": "Telegram",
       "description_fa": "تلگرام در چند نوبت دچار نشت اطلاعات کاربران شد؛ از جمله یک بانک اطلاعاتی محافظت‌نشده که توسط محقق امنیتی باب دیاچنکو کشف شد و اطلاعات ۳۵ میلیون حساب تلگرام و ۴ میلیون حساب اینستاگرام ایرانی را افشا کرد، و همچنین پایگاه داده‌ای متعلق به بیش از ۳۰ میلیون حساب کاربری تلگرام (کاربران ایرانی و روسی) که در بازارهای دارک وب برای فروش قرار گرفت. تلگرام در واکنش به نشت نخست اعلام کرد که این اتفاق از طریق کلاینت‌های غیررسمی رخ داده که با این شرکت ارتباطی ندارند.",
@@ -29,7 +26,6 @@
       "companyResponse": "partial"
     },
     "iranplast.nipc.ir": {
-      "status": "confirmed",
       "name_fa": "ایران پلاست",
       "name_en": "Iran Plast",
       "description_fa": "وب‌سایت نمایشگاه بین‌المللی ایران پلاست دچار نشت اطلاعات حدود ۱۷ هزار بازرگان شرکت‌کننده شد.",
@@ -38,7 +34,6 @@
       "companyResponse": "ignored"
     },
     "apktops.ir": {
-      "status": "confirmed",
       "name_fa": "برترین‌های اندروید",
       "name_en": "Apktops",
       "description_fa": "وب‌سایت دانلود اپلیکیشن اندروید «برترین‌های اندروید» دچار نشت اطلاعات حدود ۳ هزار حساب کاربری شد.",
@@ -47,7 +42,6 @@
       "companyResponse": "ignored"
     },
     "crackingcenter.ir": {
-      "status": "confirmed",
       "name_fa": "انجمن کرکینگ سنتر",
       "name_en": "Cracking Center",
       "description_fa": "انجمن کرکینگ سنتر دچار نشت اطلاعات حدود ۱٬۴۰۰ حساب کاربری شد.",
@@ -56,7 +50,6 @@
       "companyResponse": "ignored"
     },
     "irsecteam.org": {
-      "status": "confirmed",
       "name_fa": "تیم امنیتی ایران",
       "name_en": "Iran Security Team",
       "description_fa": "وب‌سایت تیم امنیتی ایران مورد نفوذ قرار گرفت و اطلاعات بیش از ۶ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
@@ -65,7 +58,6 @@
       "companyResponse": "ignored"
     },
     "deltafox.ir": {
-      "status": "confirmed",
       "name_fa": "دلتافوکس",
       "name_en": "Deltafox",
       "description_fa": "دلتافوکس، مرجع دانلود بازی‌های رایانه‌ای، مورد نفوذ قرار گرفت و اطلاعات حدود ۲۳ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
@@ -74,7 +66,6 @@
       "companyResponse": "ignored"
     },
     "facenama.com": {
-      "status": "confirmed",
       "name_fa": "فیس نما",
       "name_en": "Facenama",
       "description_fa": "فیس‌نما، بزرگترین شبکه اجتماعی فارسی‌زبان، مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۱۶ هزار کاربر شامل ایمیل، نام و رمز عبور هش‌شده افشا شد.",
@@ -83,7 +74,6 @@
       "companyResponse": "ignored"
     },
     "softgozar.com": {
-      "status": "confirmed",
       "name_fa": "سافت گذر",
       "name_en": "Softgozar",
       "description_fa": "وب‌سایت سافت‌گذر دچار نشت اطلاعات حدود ۴٬۴۰۰ حساب کاربری شد.",
@@ -92,7 +82,6 @@
       "companyResponse": "ignored"
     },
     "irlanguage.com": {
-      "status": "confirmed",
       "name_fa": "مرجع زبان ایرانیان",
       "name_en": "Iranian Language Reference",
       "description_fa": "آموزشگاه آنلاین «مرجع زبان ایرانیان» مورد نفوذ قرار گرفت و اطلاعات حدود ۲۴ هزار کاربر شامل نام کاربری، ایمیل و رمز عبور هش‌شده افشا شد.",
@@ -101,7 +90,6 @@
       "companyResponse": "ignored"
     },
     "pnu.ac.ir": {
-      "status": "confirmed",
       "name_fa": "دانشگاه پیام‌نور",
       "name_en": "Payame Noor University",
       "description_fa": "دانشگاه پیام‌نور در چند نوبت دچار نشت اطلاعات شد؛ از جمله اطلاعات هویتی دانشجویان و همچنین سامانه گلستان (گواهینامه موقت) شامل کد ملی، شماره دانشجویی و شماره تلفن.",
@@ -110,7 +98,6 @@
       "companyResponse": "ignored"
     },
     "rozblog.com": {
-      "status": "confirmed",
       "name_fa": "رزبلاگ",
       "name_en": "Rozblog",
       "description_fa": "رزبلاگ، یکی از ارائه‌دهندگان خدمات وبلاگ فارسی، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۸۸ هزار کاربر شامل نام، رمز عبور و آدرس ایمیل افشا شد.",
@@ -119,7 +106,6 @@
       "companyResponse": "ignored"
     },
     "royalfa.ir": {
-      "status": "confirmed",
       "name_fa": "رویال فا",
       "name_en": "Royalfa",
       "description_fa": "وب‌سایت رویال فا دچار نشت اطلاعات حدود ۱٬۶۰۰ حساب کاربری شد.",
@@ -128,7 +114,6 @@
       "companyResponse": "ignored"
     },
     "irib.ir": {
-      "status": "confirmed",
       "name_fa": "سازمان صدا و سیما",
       "name_en": "IRIB",
       "description_fa": "سازمان صدا و سیما دچار نشت اطلاعات حدود ۳٬۰۷۰ حساب کاربری شد.",
@@ -137,7 +122,6 @@
       "companyResponse": "ignored"
     },
     "sharif.ir": {
-      "status": "confirmed",
       "name_fa": "دانشگاه صنعتی شریف",
       "name_en": "Sharif University of Technology",
       "description_fa": "یکی از سرورهای دانشگاه صنعتی شریف مورد نفوذ قرار گرفت و اطلاعات هویتی کارمندان، اساتید و دانشجویان شامل کد ملی و شماره تلفن افشا شد.",
@@ -146,7 +130,6 @@
       "companyResponse": "ignored"
     },
     "bsi.ir": {
-      "status": "confirmed",
       "name_fa": "بانک صادرات ایران",
       "name_en": "Bank Saderat Iran",
       "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۶۳ میلیون مشتری بانک صادرات ایران شامل شماره حساب، شماره کارت و ایمیل برای فروش قرار گرفت.",
@@ -155,7 +138,6 @@
       "companyResponse": "ignored"
     },
     "tums.ac.ir": {
-      "status": "confirmed",
       "name_fa": "دانشگاه علوم پزشکی تهران",
       "name_en": "Tehran University of Medical Sciences",
       "description_fa": "دانشگاه علوم پزشکی تهران در چند نوبت دچار نشت اطلاعات شد؛ از جمله افشای اطلاعات دانشجویان و همچنین سامانه فیش حقوقی کارمندان شامل کد ملی، ایمیل و رمز عبور.",
@@ -164,7 +146,6 @@
       "companyResponse": "ignored"
     },
     "karbank.ir": {
-      "status": "confirmed",
       "name_fa": "کاربانک",
       "name_en": "Karbank",
       "description_fa": "کاربانک، سرویس کاریابی و آگهی شغلی، مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۰۰ هزار کاربر شامل نام، رمز عبور و شماره تلفن افشا شد.",
@@ -173,7 +154,6 @@
       "companyResponse": "ignored"
     },
     "ponisha.ir": {
-      "status": "confirmed",
       "name_fa": "پونیشا",
       "name_en": "Ponisha",
       "description_fa": "پونیشا، سرویس فریلنسری و پروژه‌های آنلاین، در دو نوبت دچار نشت اطلاعات شد که مجموعاً اطلاعات بیش از ۲۷۰ هزار کاربر شامل نام، کد ملی و شماره تلفن را افشا کرد.",
@@ -182,7 +162,6 @@
       "companyResponse": "partial"
     },
     "asiatech.ir": {
-      "status": "confirmed",
       "name_fa": "آسیاتک",
       "name_en": "Asiatech",
       "description_fa": "آسیاتک، یکی از ارائه‌دهندگان خدمات اینترنت در ایران، دچار نشت اطلاعات حدود ۲۳ میلیون کاربر شامل نام، کد ملی و شماره تلفن شد.",
@@ -191,7 +170,6 @@
       "companyResponse": "partial"
     },
     "facebook.com": {
-      "status": "confirmed",
       "name_fa": "فیس‌بوک",
       "name_en": "Facebook",
       "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۵۳۰ میلیون کاربر فیس‌بوک در سراسر جهان (از جمله ۱.۶ میلیون کاربر ایرانی) برای فروش قرار گرفت.",
@@ -200,7 +178,6 @@
       "companyResponse": "acknowledged"
     },
     "aichallenge.ir": {
-      "status": "confirmed",
       "name_fa": "نبرد هوش مصنوعی شریف",
       "name_en": "Sharif AI Challenge",
       "description_fa": "رویداد «نبرد هوش مصنوعی شریف» دچار نشت اطلاعات حدود ۱٬۷۰۰ حساب کاربری شرکت‌کننده شد.",
@@ -209,7 +186,6 @@
       "companyResponse": "ignored"
     },
     "raychat.io": {
-      "status": "confirmed",
       "name_fa": "رایچت",
       "name_en": "Raychat",
       "description_fa": "رایچت، پلتفرم گفتگوی آنلاین، دچار نشت داده‌ای شد که اطلاعات بیش از ۱۵۰ میلیون خط شامل نام، ایمیل، شماره تلفن و رمز عبور را افشا کرد.",
@@ -218,7 +194,6 @@
       "companyResponse": "acknowledged"
     },
     "radargps.org": {
-      "status": "confirmed",
       "name_fa": "رادار جی‌پی‌اس",
       "name_en": "Radar GPS",
       "description_fa": "وب‌سایت رادار جی‌پی‌اس دچار نشت اطلاعات حدود ۱٬۵۵۰ حساب کاربری شد.",
@@ -227,7 +202,6 @@
       "companyResponse": "ignored"
     },
     "adliran.ir": {
-      "status": "confirmed",
       "name_fa": "قوه قضائیه",
       "name_en": "Iran Judiciary",
       "description_fa": "قوه قضائیه در چند نوبت دچار نشت اطلاعات شد؛ از جمله سامانه احراز هویت ثنا (بیش از ۲۵ میلیون کاربر شامل کد ملی، تاریخ تولد و رمزهای هش‌شده) و همچنین سامانه مدیریت پرونده‌های قضایی که اطلاعات شخصی و هویتی میلیون‌ها شهروند ایرانی را افشا کرد.",
@@ -236,7 +210,6 @@
       "companyResponse": "ignored"
     },
     "etoudplus.ir": {
-      "status": "confirmed",
       "name_fa": "اتود پلاس",
       "name_en": "Etoud Plus",
       "description_fa": "سامانه آموزشی اتود پلاس مورد نفوذ قرار گرفت و اطلاعات بیش از ۳۴ هزار دانش‌آموز/معلم به همراه فهرست مخاطبین حدود ۱۸۰ هزار نفر از خانواده‌های آن‌ها افشا شد.",
@@ -245,7 +218,6 @@
       "companyResponse": "ignored"
     },
     "moi.ir": {
-      "status": "confirmed",
       "name_fa": "وزارت کشور",
       "name_en": "Ministry of Interior",
       "description_fa": "سامانه ثبت سازمان‌های مردم‌نهاد وزارت کشور دچار نشت اطلاعات حدود ۱۳۰ هزار کاربر شامل کد ملی و آدرس ایمیل شد.",
@@ -254,7 +226,6 @@
       "companyResponse": "ignored"
     },
     "cheraghcheck.ir": {
-      "status": "confirmed",
       "name_fa": "انجمن چراغ چک",
       "name_en": "Cheraghcheck",
       "description_fa": "انجمن چراغ چک، مرجع تخصصی برق خودرو، دچار نشت اطلاعات حدود ۶ هزار کاربر شامل نام کاربری، رمز عبور و ایمیل شد.",
@@ -263,7 +234,6 @@
       "companyResponse": "ignored"
     },
     "badesaba.ir": {
-      "status": "confirmed",
       "name_fa": "تقویم اذان‌گو بادصبا",
       "name_en": "Badesaba",
       "description_fa": "سرور مشترک میزبانی چند نرم‌افزار مذهبی ایرانی، از جمله «تقویم اذان‌گو بادصبا»، «نرم‌افزار اسلامی پرسمان» و «تقویم روزشمار تشیع ضحی»، مورد نفوذ قرار گرفت و اطلاعات کاربران این نرم‌افزارها شامل نام، رمز عبور، شماره تلفن و شناسه دستگاه افشا شد. چند نرم‌افزار دیگر که از همین سرور مشترک استفاده می‌کردند به‌صورت جداگانه در فهرست ثبت شده‌اند.",
@@ -272,7 +242,6 @@
       "companyResponse": "ignored"
     },
     "bankmellat.ir": {
-      "status": "confirmed",
       "name_fa": "بانک ملت",
       "name_en": "Bank Mellat",
       "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۳۰ میلیون مشتری بانک ملت شامل کد ملی، تاریخ تولد و آدرس برای فروش قرار گرفت.",
@@ -281,7 +250,6 @@
       "companyResponse": "ignored"
     },
     "rahvar120.ir": {
-      "status": "confirmed",
       "name_fa": "پلیس راهور",
       "name_en": "Traffic Police (Rahvar)",
       "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۱۳ میلیون خودرو و موتورسیکلت ثبت‌شده نزد پلیس راهور، شامل نام مالک، کد ملی و شماره پلاک، برای فروش قرار گرفت.",
@@ -290,7 +258,6 @@
       "companyResponse": "ignored"
     },
     "kanoon.ir": {
-      "status": "confirmed",
       "name_fa": "کانون قلم‌چی",
       "name_en": "Kanoon (Ghalamchi)",
       "description_fa": "کانون فرهنگی آموزش قلم‌چی مورد نفوذ قرار گرفت و اطلاعات بیش از ۴٫۳ میلیون دانش‌آموز شامل کد ملی و تاریخ تولد افشا شد.",
@@ -299,7 +266,6 @@
       "companyResponse": "ignored"
     },
     "classino.com": {
-      "status": "confirmed",
       "name_fa": "کلاسینو",
       "name_en": "Classino",
       "description_fa": "کلاسینو، آموزشگاه آنلاین کنکور، دچار نشت اطلاعات حدود ۳۰ هزار کاربر شامل کد ملی و شماره تلفن شد.",
@@ -308,7 +274,6 @@
       "companyResponse": "ignored"
     },
     "post.ir": {
-      "status": "confirmed",
       "name_fa": "اداره پست",
       "name_en": "Iran Post",
       "description_fa": "پایگاه داده‌ای متعلق به اداره پست سرپل ذهاب حاوی اطلاعات بیش از ۵ هزار مشتری شامل کد ملی و شماره تلفن برای فروش قرار گرفت.",
@@ -317,7 +282,6 @@
       "companyResponse": "ignored"
     },
     "pmo.ir": {
-      "status": "confirmed",
       "name_fa": "سازمان بنادر و دریانوردی",
       "name_en": "Ports and Maritime Organization",
       "description_fa": "سازمان بنادر و دریانوردی ایران هدف حمله سایبری قرار گرفت و حدود ۱۵ گیگابایت داده شامل اطلاعات کارمندان، مشتریان و قراردادها افشا شد.",
@@ -326,7 +290,6 @@
       "companyResponse": "partial"
     },
     "bmi.ir": {
-      "status": "confirmed",
       "name_fa": "بانک ملی ایران",
       "name_en": "Bank Melli Iran",
       "description_fa": "پایگاه داده‌ای حاوی اطلاعات بیش از ۷۰ میلیون مشتری بانک ملی ایران شامل نام، کد ملی و تاریخ تولد برای فروش قرار گرفت.",
@@ -335,7 +298,6 @@
       "companyResponse": "ignored"
     },
     "kntu.ac.ir": {
-      "status": "confirmed",
       "name_fa": "دانشگاه خواجه نصیر",
       "name_en": "K. N. Toosi University of Technology",
       "description_fa": "یکی از سامانه‌های دانشگاه صنعتی خواجه نصیرالدین طوسی مورد نفوذ قرار گرفت و اطلاعات هویتی حدود ۱۰۰ هزار دانشجو شامل کد ملی افشا شد.",
@@ -344,7 +306,6 @@
       "companyResponse": "partial"
     },
     "instagram.com": {
-      "status": "confirmed",
       "name_fa": "اینستاگرام",
       "name_en": "Instagram",
       "description_fa": "به گفته محقق امنیتی باب دیاچنکو، گروه هکری «سک‌نرد» با سوءاستفاده از یک سرور Elasticsearch با پیکربندی نادرست، اطلاعات میلیون‌ها کاربر ایرانی اینستاگرام شامل نام، شناسه کاربری، شماره تلفن، آدرس ایمیل و تصویر پروفایل را جمع‌آوری کرد که ظاهراً به نهادهای اطلاعاتی ایران منتقل می‌شد.",
@@ -353,7 +314,6 @@
       "companyResponse": "partial"
     },
     "bargheman.com": {
-      "status": "confirmed",
       "name_fa": "برق من",
       "name_en": "Bargheman",
       "description_fa": "سامانه برق‌من، پرتال پرداخت قبض برق، دچار نشت اطلاعات بیش از ۴۸۰ هزار کاربر شامل کد ملی و شماره تلفن شد.",
@@ -362,7 +322,6 @@
       "companyResponse": "ignored"
     },
     "mcls.gov.ir": {
-      "status": "confirmed",
       "name_fa": "وزارت تعاون، کار و رفاه اجتماعی",
       "name_en": "Ministry of Cooperatives, Labour and Social Welfare",
       "description_fa": "بانک اطلاعاتی اداره کل تعاون، کار و رفاه اجتماعی استان تهران حاوی اطلاعات بیش از ۶۳۰ هزار کارمند شامل کد ملی و آدرس برای فروش قرار گرفت.",
@@ -371,7 +330,6 @@
       "companyResponse": "ignored"
     },
     "samalive.ir": {
-      "status": "confirmed",
       "name_fa": "سامانه آموزشی سمالایو",
       "name_en": "Samalive",
       "description_fa": "سامانه آموزشی سمالایو مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۰۰ هزار دانشجو شامل کد ملی و شماره تلفن افشا شد.",
@@ -380,7 +338,6 @@
       "companyResponse": "ignored"
     },
     "tapsi.ir": {
-      "status": "confirmed",
       "name_fa": "تپسی",
       "name_en": "Tapsi",
       "description_fa": "تپسی، یکی از بزرگترین سرویس‌های تاکسی اینترنتی ایران، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۶ میلیون مسافر و ۳ میلیون راننده شامل هویت و سفرها افشا شد.",
@@ -389,7 +346,6 @@
       "companyResponse": "ignored"
     },
     "iranlaptopparts.com": {
-      "status": "confirmed",
       "name_fa": "لپ‌تاپ پارت",
       "name_en": "Laptop Parts",
       "description_fa": "وب‌سایت لپ‌تاپ‌پارت مورد نفوذ قرار گرفت و اطلاعات بیش از ۱۷ هزار کاربر شامل رمز عبور و شماره تلفن افشا شد.",
@@ -398,7 +354,6 @@
       "companyResponse": "ignored"
     },
     "ipresta.ir": {
-      "status": "confirmed",
       "name_fa": "آی پرستا",
       "name_en": "iPresta",
       "description_fa": "آی‌پرستا، نماینده رسمی پرستاشاپ در ایران، مورد نفوذ قرار گرفت و اطلاعات بیش از ۲۰ هزار کاربر شامل ایمیل و شناسه کاربری افشا شد.",
@@ -407,7 +362,6 @@
       "companyResponse": "ignored"
     },
     "behansystem.com": {
-      "status": "confirmed",
       "name_fa": "بهان سیستم",
       "name_en": "Behan System",
       "description_fa": "بهان سیستم، فروشنده قطعات لپ‌تاپ، مورد نفوذ قرار گرفت و اطلاعات بیش از ۴۱ هزار کاربر شامل نام و شماره تلفن افشا شد.",
@@ -416,7 +370,6 @@
       "companyResponse": "ignored"
     },
     "shenoto.com": {
-      "status": "confirmed",
       "name_fa": "شنوتو",
       "name_en": "Shenoto",
       "description_fa": "شنوتو، پلتفرم پخش و اشتراک‌گذاری فایل‌های صوتی، دچار نشت اطلاعات حدود ۱۰ هزار کاربر شامل نام و ایمیل شد.",
@@ -425,7 +378,6 @@
       "companyResponse": "ignored"
     },
     "nazemonweb.ir": {
-      "status": "confirmed",
       "name_fa": "ناظمون",
       "name_en": "Nazemon",
       "description_fa": "ناظمون، سامانه مدیریت مدارس هوشمند، دچار نشت اطلاعات حدود ۱۰۰ هزار والد و دانش‌آموز شامل کد ملی و شماره تلفن شد.",
@@ -434,7 +386,6 @@
       "companyResponse": "ignored"
     },
     "dadrah.ir": {
-      "status": "confirmed",
       "name_fa": "دادراه",
       "name_en": "Dadrah",
       "description_fa": "دادراه، سامانه ارتباطی مردم با وکلا، دچار نشت اطلاعات بیش از ۵۰ هزار وکیل، مشاور حقوقی و کاربر شامل کد ملی، رمز عبور و شماره تلفن شد.",
@@ -443,7 +394,6 @@
       "companyResponse": "ignored"
     },
     "mci.ir": {
-      "status": "confirmed",
       "name_fa": "همراه اول",
       "name_en": "Hamrah-e Aval (MCI)",
       "description_fa": "به ادعای گروه هکری ShadowBits، پایگاه داده همراه اول مورد نفوذ قرار گرفت و اطلاعات ۳۰ میلیون مشترک شامل کد ملی و آدرس پستی افشا شد.",
@@ -452,7 +402,6 @@
       "companyResponse": "ignored"
     },
     "banksepah.ir": {
-      "status": "confirmed",
       "name_fa": "بانک سپه",
       "name_en": "Bank Sepah",
       "description_fa": "به ادعای گروه هکری Codebreakers، پایگاه داده بانک سپه مورد نفوذ قرار گرفت و اطلاعات مالی و هویتی ۴۲ میلیون مشتری در خطر افشا قرار گرفت.",
@@ -461,7 +410,6 @@
       "companyResponse": "partial"
     },
     "ihio.gov.ir": {
-      "status": "confirmed",
       "name_fa": "سازمان بیمه سلامت ایران",
       "name_en": "Iran Health Insurance Organization",
       "description_fa": "سازمان بیمه سلامت ایران هدف حمله سایبری قرار گرفت و اطلاعات میلیون‌ها بیمه‌شده شامل کد ملی، تاریخ تولد و شناسه بیمه افشا شد.",
@@ -470,7 +418,6 @@
       "companyResponse": "ignored"
     },
     "iauyazd.ac.ir": {
-      "status": "confirmed",
       "name_fa": "دانشگاه آزاد اسلامی واحد یزد",
       "name_en": "Islamic Azad University, Yazd Branch",
       "description_fa": "دانشگاه آزاد اسلامی واحد یزد دچار نشت اطلاعات دانشجویان و اساتید شامل کد ملی و تاریخ تولد شد.",
@@ -479,7 +426,6 @@
       "companyResponse": "ignored"
     },
     "ttac.ir": {
-      "status": "confirmed",
       "name_fa": "سازمان غذا و دارو",
       "name_en": "Food and Drug Organization",
       "description_fa": "سامانه زنجیره تامین سازمان غذا و دارو دچار نشت اطلاعات بیش از ۷ هزار کاربر شامل کد ملی و شماره موبایل شد.",
@@ -488,7 +434,6 @@
       "companyResponse": "ignored"
     },
     "safirstores.com": {
-      "status": "confirmed",
       "name_fa": "فروشگاه اینترنتی سفیر",
       "name_en": "Safir Stores",
       "description_fa": "فروشگاه اینترنتی سفیر مورد حمله سایبری قرار گرفت و اطلاعات بیش از ۱۷۰ هزار کاربر شامل کد ملی، سفارش‌ها و پرداخت‌ها افشا شد.",
@@ -497,7 +442,6 @@
       "companyResponse": "ignored"
     },
     "applygermany.com": {
-      "status": "confirmed",
       "name_fa": "اپلای جرمنی",
       "name_en": "ApplyGermany",
       "description_fa": "پلتفرم اپلای جرمنی، فعال در حوزه مهاجرت تحصیلی، دچار نشت اطلاعات بیش از ۸ هزار کاربر شامل کد ملی، رمز عبور و تصویر پاسپورت شد.",
@@ -506,7 +450,6 @@
       "companyResponse": "ignored"
     },
     "mymafatih.com": {
-      "status": "confirmed",
       "name_fa": "مفاتیح صوتی باب النعیم",
       "name_en": "Mafatih Sote Bab al-Naeem",
       "description_fa": "سرور میزبانی مشترک چند نرم‌افزار دینی «شرکت پیشگامان موج همراه» مورد نفوذ قرار گرفت و اطلاعات حدود ۲.۲ میلیون کاربر نرم‌افزار «مفاتیح صوتی باب النعیم» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه افشا شد.",
@@ -515,7 +458,6 @@
       "companyResponse": "ignored"
     },
     "myghoran.com": {
-      "status": "confirmed",
       "name_fa": "قرآن صوتی حبل المتين",
       "name_en": "Audio Quran Hablul Matin",
       "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۲.۹ میلیون کاربر نرم‌افزار «قرآن صوتی حبل‌المتین» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
@@ -524,7 +466,6 @@
       "companyResponse": "ignored"
     },
     "balagh.ir": {
-      "status": "confirmed",
       "name_fa": "نهج البلاغه صوتی کیمیا",
       "name_en": "Audio Nahj al-Balagha Kimia",
       "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۲۲۵ هزار کاربر نرم‌افزار «نهج‌البلاغه صوتی کیمیا» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
@@ -533,7 +474,6 @@
       "companyResponse": "ignored"
     },
     "nomrebartar.com": {
-      "status": "confirmed",
       "name_fa": "رسانه آموزشی نمره بهتر",
       "name_en": "Nomre Bartar Educational Media",
       "description_fa": "همان نفوذ به سرور مشترک نرم‌افزارهای دینی، اطلاعات حدود ۴۲ هزار کاربر «رسانه آموزشی نمره بهتر» شامل نام، نام کاربری، رمز عبور، شماره تلفن همراه، مدل گوشی و شناسه دستگاه را افشا کرد.",
@@ -542,7 +482,6 @@
       "companyResponse": "ignored"
     },
     "x.com": {
-      "status": "confirmed",
       "name_fa": "توییتر",
       "name_en": "Twitter",
       "description_fa": "به گفته محقق امنیتی باب دیاچنکو، گروه هکری «سک‌نرد» با سوءاستفاده از یک سرور Elasticsearch با پیکربندی نادرست، اطلاعات میلیون‌ها کاربر ایرانی توییتر شامل نام، شناسه کاربری، شماره تلفن و آدرس ایمیل را جمع‌آوری کرد که ظاهراً به نهادهای اطلاعاتی ایران منتقل می‌شد.",
@@ -551,7 +490,6 @@
       "companyResponse": "partial"
     },
     "saraf.app": {
-      "status": "reported",
       "name_fa": "صراف",
       "name_en": "Saraf",
       "description_fa": "صرافی ارز دیجیتال صراف دچار نشت اطلاعات حدود ۵ میلیون کاربر شامل نام، کد ملی، تاریخ تولد، شماره تلفن، آدرس، موجودی حساب و اطلاعات بانکی شد.",
