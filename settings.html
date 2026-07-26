@@ -28,19 +28,36 @@
 
   <div class="main-content">
     <div class="settings-section" id="settings">
-      <h2 data-i18n="notificationSettingsHeading">Notification Settings</h2>
-      <label>
-        <input type="radio" name="notification-mode" value="once">
-        <span data-i18n="notifModeOnce">Once per Site</span>
-      </label>
-      <label>
-        <input type="radio" name="notification-mode" value="every-time">
-        <span data-i18n="notifModeEveryTime">Always</span>
-      </label>
-      <label>
-        <input type="radio" name="notification-mode" value="off">
-        <span data-i18n="notifModeOff">Off</span>
-      </label>
+      <h2 data-i18n="alertSettingsHeading">Alert Settings</h2>
+      <div class="alert-option">
+        <label>
+          <input type="radio" name="alert-type" value="warn-page">
+          <span data-i18n="alertTypeWarnPage">Show warning page</span>
+        </label>
+      </div>
+      <div class="alert-option">
+        <label>
+          <input type="radio" name="alert-type" value="notification">
+          <span data-i18n="alertTypeNotification">Show notification</span>
+        </label>
+      </div>
+      <div class="alert-option">
+        <label>
+          <input type="radio" name="alert-type" value="off">
+          <span data-i18n="alertTypeOff">Off</span>
+        </label>
+      </div>
+
+      <div class="segmented" id="alert-frequency-control" style="display: none;">
+        <label class="segment">
+          <input type="radio" name="alert-frequency" value="once">
+          <span data-i18n="alertFreqOnce">Once per site</span>
+        </label>
+        <label class="segment">
+          <input type="radio" name="alert-frequency" value="session">
+          <span data-i18n="alertFreqSession">Always</span>
+        </label>
+      </div>
 
       <h2 data-i18n="languageSettingsHeading">Language Settings</h2>
       <label>
@@ -83,6 +100,10 @@
         <input type="number" id="custom-schedule-input" data-i18n-placeholder="customDaysPlaceholder" placeholder="Enter days" disabled>
       </div>
       <button id="save-custom" style="display: none;" data-i18n="save">Save</button>
+
+      <h2 data-i18n="resetHeading">Reset</h2>
+      <p data-i18n="resetDescription">Restores alert, language, theme, and update settings to their defaults.</p>
+      <button id="reset-defaults-button" data-i18n="resetDefaults">Reset to Default Settings</button>
     </div>
 
     <div class="settings-section" id="history">
@@ -109,7 +130,7 @@
       <p data-i18n="aboutDonateText">If you find this extension helpful, consider donating to support further development.</p>
       <button id="donate-button" data-i18n="donate">Donate</button>
       <div class="social-links">
-        <a href="https://github.com/Leakfarsi/Leakfa.com" target="_blank" class="social-link" title="Github" aria-label="Github" data-i18n-title="socialGithub">
+        <a href="https://github.com/Leakfarsi/Leakfa-Alert" target="_blank" class="social-link" title="Github" aria-label="Github" data-i18n-title="socialGithub">
           <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         </a>
         <a href="https://x.com/leakfarsi" target="_blank" class="social-link" title="X (Twitter)" aria-label="X (Twitter)" data-i18n-title="socialTwitter">
