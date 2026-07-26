@@ -123,12 +123,96 @@ label:hover {
   background-color: #f2f3f5;
 }
 
-#history-list li.confirmed::marker {
-  color: #008000;
+label.disabled {
+  cursor: default;
+  opacity: 0.45;
 }
 
-#history-list li.reported::marker {
-  color: #a86c00;
+label.disabled:hover {
+  background-color: transparent;
+}
+
+.alert-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 2px;
+  border-radius: 9px;
+  transition: background-color 0.15s ease;
+}
+
+.alert-option:hover {
+  background-color: #f2f3f5;
+}
+
+.alert-option > label {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.alert-option > label:hover {
+  background-color: transparent;
+}
+
+.alert-option > .segmented {
+  margin-inline-end: 10px;
+}
+
+.segmented {
+  display: inline-flex;
+  flex-shrink: 0;
+  border: 1px solid #d5d7db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.segmented .segment {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  position: relative;
+}
+
+.segmented .segment:hover {
+  background-color: transparent;
+}
+
+.segmented .segment input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.segmented .segment span {
+  padding: 5px 12px;
+  font-size: 12.5px;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.segmented .segment span:hover {
+  background-color: #f2f3f5;
+}
+
+.segmented .segment input:checked + span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.segmented .segment input[value="once"]:checked + span {
+  background-color: #008000;
+}
+
+.segmented .segment input[value="session"]:checked + span {
+  background-color: #a86c00;
+}
+
+.segmented .segment input:focus-visible + span {
+  outline: 2px solid #0056b3;
+  outline-offset: -2px;
 }
 
 #history-list {
@@ -195,6 +279,14 @@ button:focus-visible {
 
 #donate-button {
   margin-top: 6px;
+}
+
+#reset-defaults-button.confirming {
+  background-color: #c00028;
+}
+
+#reset-defaults-button.confirming:hover {
+  background-color: #a30021;
 }
 
 .social-links {
