@@ -1,16 +1,16 @@
-#toggle-notification.every-time {
-  background-color: #a86c00;
-  color: white;
-  font-weight: bold;
-}
-
-#toggle-notification.once {
+#toggle-alert-mode.once {
   background-color: #008000;
   color: white;
   font-weight: bold;
 }
 
-#toggle-notification.off {
+#toggle-alert-mode.session {
+  background-color: #a86c00;
+  color: white;
+  font-weight: bold;
+}
+
+#toggle-alert-mode.off {
   background-color: #ff0033;
   color: white;
   font-weight: bold;
@@ -28,6 +28,8 @@
 
 .response-banner::before {
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 3px;
   font-size: 12px;
   line-height: 1;
 }
