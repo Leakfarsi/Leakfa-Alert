@@ -190,6 +190,63 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+const LEAKFA_RESETTABLE_SYNC_KEYS = [
+    'alertStyle',
+    'alertFrequency',
+    'alertMode',
+    'notificationMode',
+    'showNotifications',
+    'notificationButtonColor',
+    'theme',
+    'language',
+    'updateFrequency',
+    'customUpdateDays',
+    'saveFindingsHistory'
+];
+
+const RESET_CONFIRM_TIMEOUT_MS = 4000;
+
+document.addEventListener('DOMContentLoaded', function () {
+    const resetButton = document.getElementById('reset-defaults-button');
+    if (!resetButton) {
+        return;
+    }
+
+    let awaitingConfirmation = false;
+    let confirmationTimer = null;
+
+    function cancelConfirmation() {
+        awaitingConfirmation = false;
+        clearTimeout(confirmationTimer);
+        resetButton.classList.remove('confirming');
+        resetButton.textContent = leakfaTranslate('resetDefaults', currentLanguage);
+    }
+
+    resetButton.addEventListener('click', function () {
+        if (!awaitingConfirmation) {
+            awaitingConfirmation = true;
+            resetButton.classList.add('confirming');
+            resetButton.textContent = leakfaTranslate('resetConfirm', currentLanguage);
+            confirmationTimer = setTimeout(cancelConfirmation, RESET_CONFIRM_TIMEOUT_MS);
+            return;
+        }
+
+        awaitingConfirmation = false;
+        clearTimeout(confirmationTimer);
+        resetButton.disabled = true;
+        resetButton.classList.remove('confirming');
+
+        chrome.storage.sync.remove(LEAKFA_RESETTABLE_SYNC_KEYS, function () {
+            notifyBackgroundToUpdate('weekly');
+            chrome.runtime.sendMessage({ type: 'update_theme', theme: 'system' });
+            resetButton.textContent = leakfaTranslate('resetDone', currentLanguage);
+            setTimeout(function () {
+                window.location.reload();
+            }, 800);
+        });
+    });
+});
+
 function notifyBackgroundToUpdate(updateFrequency, customDays) {
     const message = {
         type: 'update_frequency',
@@ -221,24 +278,72 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const notificationModeRadios = document.querySelectorAll('input[name="notification-mode"]');
+    const typeRadios = document.querySelectorAll('input[name="alert-type"]');
+    const frequencyRadios = document.querySelectorAll('input[name="alert-frequency"]');
+    const frequencyControl = document.getElementById('alert-frequency-control');
 
-    chrome.storage.sync.get(['notificationMode', 'showNotifications'], function(result) {
-        const mode = leakfaResolveNotificationMode(result.notificationMode, result.showNotifications);
-        const targetRadio = document.querySelector(`input[name="notification-mode"][value="${mode}"]`);
-        if (targetRadio) {
-            targetRadio.checked = true;
+    let lastActiveStyle = 'warn-page';
+    let lastActiveFrequency = 'once';
+
+    function renderAlertSettings(alert) {
+        const isOff = alert.frequency === 'off';
+        if (!isOff) {
+            lastActiveStyle = alert.style;
+            lastActiveFrequency = alert.frequency;
         }
+
+        const typeRadio = document.querySelector(`input[name="alert-type"][value="${isOff ? 'off' : alert.style}"]`);
+        if (typeRadio) {
+            typeRadio.checked = true;
+        }
+        const frequencyRadio = document.querySelector(`input[name="alert-frequency"][value="${isOff ? lastActiveFrequency : alert.frequency}"]`);
+        if (frequencyRadio) {
+            frequencyRadio.checked = true;
+        }
+
+        if (!frequencyControl) {
+            return;
+        }
+        if (isOff || !typeRadio) {
+            frequencyControl.style.display = 'none';
+            return;
+        }
+        const activeOption = typeRadio.closest('.alert-option');
+        if (activeOption && frequencyControl.parentNode !== activeOption) {
+            activeOption.appendChild(frequencyControl);
+        }
+        frequencyControl.style.display = 'inline-flex';
+    }
+
+    chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications'], function(result) {
+        renderAlertSettings(leakfaResolveAlertSettings(result));
     });
 
-    notificationModeRadios.forEach(radio => {
+    typeRadios.forEach(radio => {
         radio.addEventListener('change', function() {
-            if (this.checked) {
-                const mode = this.value;
-                chrome.storage.sync.set({ notificationMode: mode }, function() {
-                    console.log('Notification mode saved:', mode);
-                });
+            if (!this.checked) {
+                return;
             }
+            const next = this.value === 'off'
+                ? { style: lastActiveStyle, frequency: 'off' }
+                : { style: this.value, frequency: lastActiveFrequency };
+            chrome.storage.sync.set({ alertStyle: next.style, alertFrequency: next.frequency }, function() {
+                console.log('Alert type saved:', next.style, next.frequency);
+                renderAlertSettings(next);
+            });
+        });
+    });
+
+    frequencyRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (!this.checked) {
+                return;
+            }
+            const frequency = this.value;
+            chrome.storage.sync.set({ alertFrequency: frequency }, function() {
+                console.log('Alert frequency saved:', frequency);
+                lastActiveFrequency = frequency;
+            });
         });
     });
 });
@@ -261,7 +366,6 @@ function renderHistory() {
 
         history.forEach(function(entry) {
             const item = document.createElement('li');
-            item.className = leakfaResolveLeakStatus(entry);
 
             const domainEl = document.createElement('strong');
             domainEl.textContent = entry.domain;
@@ -270,9 +374,9 @@ function renderHistory() {
             item.appendChild(document.createTextNode(` – ${leakfaGetLocalizedDescription(entry, currentLanguage)} `));
 
             const link = document.createElement('a');
-            link.href = leakfaResolveSafeURL(entry.relatedURL, 'https://leakfa.com/leaks');
+            link.href = leakfaResolveSafeURL(entry.relatedURL, 'https://extension.leakfarsi.workers.dev/leaks');
             link.target = '_blank';
-            link.textContent = leakfaTranslate('checkOnLeakfa', currentLanguage);
+            link.textContent = leakfaTranslate('viewLeakDetails', currentLanguage);
             item.appendChild(link);
 
             historyList.appendChild(item);
