@@ -1,97 +1,99 @@
 let currentLanguage = 'en';
 
 document.addEventListener('DOMContentLoaded', function () {
-    chrome.storage.sync.get(['notificationMode', 'showNotifications', 'language'], function(result) {
+    chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications', 'language'], function(result) {
         currentLanguage = leakfaResolveLanguage(result.language);
         leakfaApplyTranslations(currentLanguage);
 
-        updateNotificationButton(leakfaResolveNotificationMode(result.notificationMode, result.showNotifications));
+        updateAlertModeButton(leakfaResolveAlertSettings(result));
 
         chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
             const currentTab = tabs[0];
             let hostname = null;
-            let pathname = null;
             if (currentTab && currentTab.url) {
                 try {
-                    const parsedURL = new URL(currentTab.url);
-                    hostname = parsedURL.hostname;
-                    pathname = parsedURL.pathname;
+                    hostname = new URL(currentTab.url).hostname;
                 } catch (e) {
                     hostname = null;
                 }
             }
 
-            chrome.storage.local.get(['domainDescriptions'], function(localResult) {
-                const domainDescriptions = localResult.domainDescriptions || {};
-                const descriptionElement = document.getElementById('description');
-                const responseBanner = document.getElementById('response-banner');
-                if (descriptionElement) {
-                    const domain = hostname ? leakfaMatchDomain(hostname, pathname, domainDescriptions) : null;
-                    const descriptionObj = domain ? domainDescriptions[domain] : null;
-                    if (descriptionObj) {
-                        descriptionElement.textContent = leakfaGetLocalizedDescription(descriptionObj, currentLanguage);
-                        if (responseBanner) {
-                            const companyResponse = leakfaResolveCompanyResponse(descriptionObj);
-                            const COMPANY_RESPONSE_KEYS = {
-                                acknowledged: 'companyResponseAcknowledged',
-                                partial: 'companyResponsePartial',
-                                ignored: 'companyResponseIgnored'
-                            };
-                            const entityName = leakfaResolveEntityName(descriptionObj, currentLanguage);
-                            const template = leakfaTranslate(COMPANY_RESPONSE_KEYS[companyResponse], currentLanguage);
-                            responseBanner.textContent = template.replace('{name}', entityName);
-                            responseBanner.className = 'response-banner ' + companyResponse;
-                            responseBanner.style.display = 'flex';
-                        }
-                        const safeRelatedURL = leakfaResolveSafeURL(descriptionObj.relatedURL, 'https://leakfa.com/leaks');
-                        const checkLeakfaButton = document.getElementById('check-leakfa');
-                        if (checkLeakfaButton) {
-                            checkLeakfaButton.addEventListener('click', function() {
-                                chrome.tabs.create({ url: safeRelatedURL });
-                            });
-                        }
-                    } else {
-                        descriptionElement.textContent = leakfaTranslate('noDescription', currentLanguage);
-                        if (responseBanner) {
-                            responseBanner.style.display = 'none';
-                        }
-                        const checkLeakfaButton = document.getElementById('check-leakfa');
-                        if (checkLeakfaButton) {
-                            checkLeakfaButton.href = 'https://leakfa.com/leaks';
-                            checkLeakfaButton.textContent = leakfaTranslate('checkMajorLeaks', currentLanguage);
+            chrome.storage.session.get(['warningTabs'], function(sessionResult) {
+                const warningTabs = sessionResult.warningTabs || {};
+                const warnedDomain = currentTab && typeof currentTab.id === 'number'
+                    ? warningTabs[currentTab.id]
+                    : null;
 
-                            checkLeakfaButton.addEventListener('click', function() {
-                                chrome.tabs.create({ url: 'https://leakfa.com/leaks' });
-                            });
+                chrome.storage.local.get(['domainDescriptions'], function(localResult) {
+                    const domainDescriptions = localResult.domainDescriptions || {};
+                    const descriptionElement = document.getElementById('description');
+                    const responseBanner = document.getElementById('response-banner');
+                    if (descriptionElement) {
+                        const domain = (hostname ? leakfaMatchDomain(hostname, domainDescriptions) : null) || warnedDomain || null;
+                        const descriptionObj = domain ? domainDescriptions[domain] : null;
+                        if (descriptionObj) {
+                            descriptionElement.textContent = leakfaGetLocalizedDescription(descriptionObj, currentLanguage);
+                            if (responseBanner) {
+                                const companyResponse = leakfaResolveCompanyResponse(descriptionObj);
+                                const COMPANY_RESPONSE_KEYS = {
+                                    acknowledged: 'companyResponseAcknowledged',
+                                    partial: 'companyResponsePartial',
+                                    ignored: 'companyResponseIgnored'
+                                };
+                                const entityName = leakfaResolveEntityName(descriptionObj, currentLanguage);
+                                const template = leakfaTranslate(COMPANY_RESPONSE_KEYS[companyResponse], currentLanguage);
+                                responseBanner.textContent = template.replace('{name}', entityName);
+                                responseBanner.className = 'response-banner ' + companyResponse;
+                                responseBanner.style.display = 'flex';
+                            }
+                            const safeRelatedURL = leakfaResolveSafeURL(descriptionObj.relatedURL, 'https://extension.leakfarsi.workers.dev/leaks');
+                            const checkLeakfaButton = document.getElementById('check-leakfa');
+                            if (checkLeakfaButton) {
+                                checkLeakfaButton.addEventListener('click', function() {
+                                    chrome.tabs.create({ url: safeRelatedURL });
+                                });
+                            }
+                        } else {
+                            descriptionElement.textContent = leakfaTranslate('noDescription', currentLanguage);
+                            if (responseBanner) {
+                                responseBanner.style.display = 'none';
+                            }
+                            const checkLeakfaButton = document.getElementById('check-leakfa');
+                            if (checkLeakfaButton) {
+                                checkLeakfaButton.href = 'https://extension.leakfarsi.workers.dev/leaks';
+                                checkLeakfaButton.textContent = leakfaTranslate('checkMajorLeaks', currentLanguage);
+
+                                checkLeakfaButton.addEventListener('click', function() {
+                                    chrome.tabs.create({ url: 'https://extension.leakfarsi.workers.dev/leaks' });
+                                });
+                            }
                         }
                     }
-                }
+                });
             });
         });
     });
 
-    const toggleButton = document.getElementById('toggle-notification');
+    const toggleButton = document.getElementById('toggle-alert-mode');
     if (toggleButton) {
-        const NOTIFICATION_MODE_CYCLE = ['off', 'once', 'every-time'];
         toggleButton.addEventListener('click', function () {
-            chrome.storage.sync.get(['notificationMode', 'showNotifications'], function(result) {
-                const current = leakfaResolveNotificationMode(result.notificationMode, result.showNotifications);
-                const next = NOTIFICATION_MODE_CYCLE[(NOTIFICATION_MODE_CYCLE.indexOf(current) + 1) % NOTIFICATION_MODE_CYCLE.length];
-                chrome.storage.sync.set({ notificationMode: next }, function() {
-                    updateNotificationButton(next);
+            chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications'], function(result) {
+                const current = leakfaResolveAlertSettings(result);
+                const next = { style: current.style, frequency: leakfaNextAlertFrequency(current.frequency) };
+                chrome.storage.sync.set({ alertFrequency: next.frequency }, function() {
+                    updateAlertModeButton(next);
                 });
             });
         });
     }
 });
 
-function updateNotificationButton(mode) {
-    const button = document.getElementById('toggle-notification');
+function updateAlertModeButton(settings) {
+    const button = document.getElementById('toggle-alert-mode');
     if (button) {
-        button.classList.remove('off', 'once', 'every-time');
-        button.classList.add(mode);
-        const key = mode === 'off' ? 'notificationOff' : mode === 'once' ? 'notificationOnce' : 'notificationEveryTime';
-        button.textContent = leakfaTranslate(key, currentLanguage);
+        button.classList.remove.apply(button.classList, LEAKFA_ALERT_FREQUENCIES);
+        button.classList.add(settings.frequency);
+        button.textContent = leakfaTranslate(leakfaAlertShortKey(settings), currentLanguage);
     }
 }
 
