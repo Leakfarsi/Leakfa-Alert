@@ -1,8 +1,8 @@
 importScripts('i18n.js', 'theme.js', 'notifications.js', 'matching.js');
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'loading' && tab.active) {
-        checkURL(tab.url);
+    if (changeInfo.status === 'loading') {
+        checkURL(tabId, tab.url);
     }
 });
 
@@ -27,20 +27,22 @@ function applyUpdateFrequency() {
 chrome.runtime.onInstalled.addListener(applyUpdateFrequency);
 chrome.runtime.onStartup.addListener(applyUpdateFrequency);
 
-function checkURL(url) {
-    let hostname, pathname;
+function checkURL(tabId, url) {
+    let hostname, protocol;
     try {
         const parsedURL = new URL(url);
         hostname = parsedURL.hostname;
-        pathname = parsedURL.pathname;
+        protocol = parsedURL.protocol;
     } catch (e) {
         return;
     }
 
+    clearWarningTab(tabId);
+
     chrome.storage.local.get(['domainDescriptions', 'notifiedDomains'], function(localResult) {
         const domainDescriptions = localResult.domainDescriptions || {};
         const notifiedDomains = localResult.notifiedDomains || {};
-        const domain = leakfaMatchDomain(hostname, pathname, domainDescriptions);
+        const domain = leakfaMatchDomain(hostname, domainDescriptions);
         const descriptionObj = domain ? domainDescriptions[domain] : null;
         const hasMatch = !!descriptionObj;
 
@@ -50,44 +52,95 @@ function checkURL(url) {
             return;
         }
 
-        chrome.storage.sync.get(['notificationMode', 'showNotifications', 'language', 'saveFindingsHistory'], function(syncResult) {
-            const notificationMode = leakfaResolveNotificationMode(syncResult.notificationMode, syncResult.showNotifications);
-            const language = leakfaResolveLanguage(syncResult.language);
-            const saveFindingsHistory = syncResult.saveFindingsHistory === undefined ? true : syncResult.saveFindingsHistory;
-
-            if (saveFindingsHistory) {
-                addToHistory(domain, descriptionObj);
-            }
-
-            if (notificationMode === 'off') {
+        chrome.storage.session.get(['pendingBack', 'sessionAlertedDomains'], function(sessionResult) {
+            if (consumePendingBack(sessionResult.pendingBack, tabId, domain)) {
                 return;
             }
-            if (notificationMode === 'once' && notifiedDomains[domain]) {
-                return;
-            }
+            const sessionAlertedDomains = sessionResult.sessionAlertedDomains || {};
 
-            const description = leakfaGetLocalizedDescription(descriptionObj, language);
-            const relatedURL = descriptionObj.relatedURL;
-            const notificationOptions = {
-                type: 'basic',
-                iconUrl: chrome.runtime.getURL('images/icon128.png'),
-                title: 'Leakfa',
-                message: `${leakfaTranslate('notificationLeakMessagePrefix', language)} ${description}`
-            };
-            chrome.notifications.create(null, notificationOptions, function(notificationId) {
-                if (chrome.runtime.lastError) {
-                    console.error("Error creating notification:", chrome.runtime.lastError.message);
-                } else {
-                    console.log("Notification created successfully:", notificationId);
-                    chrome.storage.local.set({ [notificationId]: relatedURL });
-                    if (notificationMode === 'once') {
-                        notifiedDomains[domain] = true;
-                        chrome.storage.local.set({ notifiedDomains: notifiedDomains });
-                    }
+            chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications', 'language', 'saveFindingsHistory'], function(syncResult) {
+                const alert = leakfaResolveAlertSettings(syncResult);
+                const language = leakfaResolveLanguage(syncResult.language);
+                const saveFindingsHistory = syncResult.saveFindingsHistory === undefined ? true : syncResult.saveFindingsHistory;
+
+                if (saveFindingsHistory) {
+                    addToHistory(domain, descriptionObj);
                 }
+
+                if (alert.frequency === 'off') {
+                    return;
+                }
+                const alreadyAlerted = alert.frequency === 'session' ? sessionAlertedDomains : notifiedDomains;
+                if (alreadyAlerted[domain]) {
+                    return;
+                }
+
+                if (alert.style === 'warn-page') {
+                    if (protocol !== 'http:' && protocol !== 'https:') {
+                        return;
+                    }
+                    if (typeof tabId !== 'number') {
+                        return;
+                    }
+                    const warningURL = chrome.runtime.getURL('blocked.html') + '?url=' + encodeURIComponent(url);
+                    chrome.tabs.update(tabId, { url: warningURL });
+                    return;
+                }
+
+                const description = leakfaGetLocalizedDescription(descriptionObj, language);
+                const relatedURL = descriptionObj.relatedURL;
+                const notificationOptions = {
+                    type: 'basic',
+                    iconUrl: chrome.runtime.getURL('images/icon128.png'),
+                    title: 'Leakfa',
+                    message: `${leakfaTranslate('notificationLeakMessagePrefix', language)} ${description}`
+                };
+                chrome.notifications.create(null, notificationOptions, function(notificationId) {
+                    if (chrome.runtime.lastError) {
+                        console.error("Error creating notification:", chrome.runtime.lastError.message);
+                    } else {
+                        console.log("Notification created successfully:", notificationId);
+                        chrome.storage.local.set({ [notificationId]: relatedURL });
+                        leakfaMarkDomainAlerted(domain, alert.frequency, function() {});
+                    }
+                });
             });
         });
     });
+}
+
+function clearWarningTab(tabId) {
+    if (typeof tabId !== 'number') {
+        return;
+    }
+    chrome.storage.session.get(['warningTabs'], function(result) {
+        const warningTabs = result.warningTabs || {};
+        if (!(tabId in warningTabs)) {
+            return;
+        }
+        delete warningTabs[tabId];
+        chrome.storage.session.set({ warningTabs: warningTabs });
+    });
+}
+
+const PENDING_BACK_TTL_MS = 5000;
+
+function consumePendingBack(pendingBack, tabId, domain) {
+    if (!pendingBack || pendingBack.tabId !== tabId || pendingBack.domain !== domain) {
+        return false;
+    }
+    if (Date.now() - pendingBack.at > PENDING_BACK_TTL_MS) {
+        chrome.storage.session.remove('pendingBack');
+        return false;
+    }
+    chrome.storage.session.remove('pendingBack', function() {
+        chrome.tabs.goBack(tabId, function() {
+            if (chrome.runtime.lastError) {
+                chrome.tabs.remove(tabId);
+            }
+        });
+    });
+    return true;
 }
 
 const MAX_HISTORY_ENTRIES = 200;
@@ -103,7 +156,6 @@ function addToHistory(domain, descriptionObj) {
         }
         history.unshift({
             domain: domain,
-            status: descriptionObj.status,
             description_fa: descriptionObj.description_fa || '',
             description_en: descriptionObj.description_en || '',
             relatedURL: descriptionObj.relatedURL
@@ -135,9 +187,8 @@ function checkForDomainListUpdate() {
                         if (!isFirstEverLoad) {
                             return;
                         }
-                        chrome.storage.sync.get(['notificationMode', 'showNotifications', 'language'], function(syncResult) {
-                            const notificationMode = leakfaResolveNotificationMode(syncResult.notificationMode, syncResult.showNotifications);
-                            if (notificationMode === 'off') {
+                        chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications', 'language'], function(syncResult) {
+                            if (leakfaResolveAlertSettings(syncResult).frequency === 'off') {
                                 return;
                             }
                             const language = leakfaResolveLanguage(syncResult.language);
