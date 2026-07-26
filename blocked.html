@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leakfa Alert</title>
+  <link rel="icon" href="images/icon32.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link id="theme-stylesheet" rel="stylesheet" href="css/dark-blocked.css">
+</head>
+<body>
+  <div class="warn-card">
+    <div class="warn-head">
+      <img src="images/light.png" alt="Leakfa Logo" class="warn-logo">
+      <div class="warn-head-text">
+        <h1 data-i18n="warnPageHeading">This website has a history of data leaks!</h1>
+        <p id="warn-domain" class="warn-domain"></p>
+      </div>
+    </div>
+
+    <div id="response-banner" class="response-banner" style="display: none;"></div>
+
+    <p class="warn-description">
+      <span id="warn-description-text"></span>
+      <a id="warn-details" class="warn-details-link" href="https://extension.leakfarsi.workers.dev/leaks" target="_blank" data-i18n="viewLeakDetails">View more details</a>
+    </p>
+
+    <p class="warn-advice" data-i18n="warnPageAdvice">If you intend to log in, sign up, or enter personal information, proceed with extra care, and where possible use a unique password and two-factor authentication.</p>
+
+    <div class="warn-actions">
+      <button id="warn-continue" class="warn-primary" data-i18n="warnPageContinue">Continue to site</button>
+      <button id="warn-back" data-i18n="warnPageGoBack">Go back</button>
+    </div>
+
+    <div class="warn-footer">
+      <p class="warn-intro">
+        <span data-i18n="warnPageIntro">This is not a browser security warning or a site block. Information held by Leakfa indicates that this service has suffered a data leak in the past and that some of its users’ data was exposed.</span>
+        <a href="settings.html" target="_blank" data-i18n="warnPageSettingsLink">Change alert settings</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/blocked.js"></script>
+</body>
+</html>
