@@ -167,15 +167,37 @@ function addToHistory(domain, descriptionObj) {
     });
 }
 
+function countNewDomains(previousDomains, incomingDomains) {
+    const previous = previousDomains || {};
+    const incoming = incomingDomains || {};
+    let count = 0;
+    for (const key in incoming) {
+        if (!Object.prototype.hasOwnProperty.call(previous, key)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function buildUpdateMessage(isFirstEverLoad, addedCount, language) {
+    if (isFirstEverLoad || addedCount === 0) {
+        return leakfaTranslate('notificationUpdatedMessage', language);
+    }
+    const key = addedCount === 1 ? 'notificationNewSiteMessage' : 'notificationNewSitesMessage';
+    const localizedCount = language === 'fa' ? addedCount.toLocaleString('fa-IR') : String(addedCount);
+    return leakfaTranslate(key, language).replace('{count}', localizedCount);
+}
+
 function checkForDomainListUpdate() {
     const githubURL = 'https://raw.githubusercontent.com/Leakfarsi/Leakfa-Alert/refs/heads/domains/leaks.json';
     fetch(githubURL)
         .then(response => response.json())
         .then(data => {
             const newTimestamp = new Date(data.timestamp).getTime();
-            chrome.storage.local.get(['lastUpdateTimestamp'], function(localResult) {
+            chrome.storage.local.get(['lastUpdateTimestamp', 'domainDescriptions'], function(localResult) {
                 const storedTimestamp = new Date(localResult.lastUpdateTimestamp).getTime() || 0;
                 const isFirstEverLoad = storedTimestamp === 0;
+                const addedCount = countNewDomains(localResult.domainDescriptions, data.domains);
 
                 if (newTimestamp > storedTimestamp) {
                     chrome.storage.local.set({
@@ -184,9 +206,6 @@ function checkForDomainListUpdate() {
                     }, function() {
                         console.log('Domain list has been updated.');
 
-                        if (!isFirstEverLoad) {
-                            return;
-                        }
                         chrome.storage.sync.get(['alertStyle', 'alertFrequency', 'alertMode', 'notificationMode', 'showNotifications', 'language'], function(syncResult) {
                             if (leakfaResolveAlertSettings(syncResult).frequency === 'off') {
                                 return;
@@ -196,7 +215,7 @@ function checkForDomainListUpdate() {
                                 type: 'basic',
                                 iconUrl: chrome.runtime.getURL('images/icon128.png'),
                                 title: 'Leakfa',
-                                message: leakfaTranslate('notificationUpdatedMessage', language)
+                                message: buildUpdateMessage(isFirstEverLoad, addedCount, language)
                             };
                             chrome.notifications.create(null, notificationOptions, function(notificationId) {
                                 if (chrome.runtime.lastError) {
