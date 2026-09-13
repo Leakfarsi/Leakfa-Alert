@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Leakfa Alert",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Alerts you before entering a site that has appeared in a known data breach, checked locally against a public breach list.",
   "homepage_url": "https://leakfa.com",
   "permissions": [
