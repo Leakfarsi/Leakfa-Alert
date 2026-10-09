@@ -556,9 +556,9 @@
     "wallex.ir": {
       "name_fa": "والکس",
       "name_en": "Wallex",
-      "description_fa": "پلتفرم ارز دیجیتال والکس دچار نشت اطلاعات حدود ۹۰ هزار کاربر شامل نام، کد ملی، تاریخ تولد، شماره کارت و شماره شبا شد.",
-      "description_en": "Wallex, a cryptocurrency trading platform, leaked about 90,000 users' names, national IDs, dates of birth, card numbers, and IBANs.",
-      "relatedURL": "https://telegram.leakfarsi.workers.dev/leakfarsi/121",
+      "description_fa": "صرافی ارز دیجیتال والکس دچار نشت حدود ۷۵۰ هزار رکورد از اطلاعات کاربران مربوط به سال‌های ۱۳۹۷ تا ۱۴۰۱ شد؛ شامل اطلاعات هویتی و احراز هویت، شماره کارت و شبا، موجودی کیف‌پول‌های رمزارزی و نیز حساب‌های کارکنان و داده‌های سامانه‌های داخلی. پیش‌تر نیز اطلاعات حدود ۹۰ هزار کاربر والکس افشا شده بود.\n",
+      "description_en": "Wallex, a cryptocurrency exchange, leaked around 750,000 user records from 2019–2022, including identity and verification data, card numbers, IBANs, crypto wallet balances, plus employee accounts and internal system data. Wallex also had an earlier exposure of about 90,000 users.",
+      "relatedURL": "https://telegram.leakfarsi.workers.dev/leakfarsi/347",
       "companyResponse": "ignored"
     },
     "qazvin-ajo.ir": {
