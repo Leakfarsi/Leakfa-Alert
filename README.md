@@ -1,10 +1,11 @@
-# 🛡️ افزونه کروم دیده‌بان لیکفا
-**Leakfa Alert Chrome Extension**
+# 🛡️ افزونه دیده‌بان لیکفا
+**Leakfa Alert Extension**
 
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)](#)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-success)](https://developer.chrome.com/docs/extensions)
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chromewebstore.google.com/detail/mlfokglbmlcembbcamgniolbcghonbaj)
+[![Microsoft Edge Add-ons](https://img.shields.io/badge/Microsoft%20Edge-Add--ons-blue)](https://microsoftedge.microsoft.com/addons/detail/iflkoehmckkagipfnlfhaplfgaaiiped)
 [![Version](https://img.shields.io/github/v/release/Leakfarsi/leakfa-alert?label=Version)](https://github.com/Leakfarsi/Leakfa-Alert/releases/latest)
 [![Website](https://img.shields.io/badge/Website-leakfa.com-blue.svg)](https://leakfa.com)
 
@@ -45,10 +46,16 @@
 
 ## 🧩 نصب
 
-آخرین نسخه افزونه را می‌توانید مستقیما از Chrome Web Store نصب کنید.
+آخرین نسخه افزونه برای مرورگر Google Chrome را می‌توانید مستقیما از Chrome Web Store نصب کنید.
 
 ```
 ‍‍‍https://chromewebstore.google.com/detail/mlfokglbmlcembbcamgniolbcghonbaj
+```
+
+آخرین نسخه افزونه برای مرورگر Microsoft Edge را می‌توانید مستقیما از Microsoft Edge Add-ons نصب کنید.
+
+```
+https://microsoftedge.microsoft.com/addons/detail/iflkoehmckkagipfnlfhaplfgaaiiped
 ```
 ---
 
@@ -61,9 +68,11 @@ git clone https://github.com/Leakfarsi/leakfa-alert.git
 سپس:
 
 ```
-Chrome → Extensions → Developer Mode → Load unpacked
+Chrome → Extensions → Manage Extensions → Developer Mode → Load unpacked
 ```
-
+```
+Edge → Extensions → Manage Extensions → Developer Mode → Load unpacked
+```
 ---
 
 ## 📄 مجوز
